@@ -1,0 +1,1481 @@
+                                          
+
+@define ScoreAndTimeWidth: 79px;
+@define GameScoreWidth: 39px;
+
+@define AvatarLSize: 100%;
+@define AvatarLImageWidth: 95%;
+@define AvatarLImageHeight: 59px;
+@define AvatarLBGWidth: 60px;
+@define AvatarLBGHeight: 100px;
+@define AvatarLArsenalProgressHeightAbove: -32px;
+@define AvatarLArsenalProgressHeightBelow: 64px;
+
+@define color-CT-score: #454b51;
+@define color-T-score: #483a2a;
+
+@define AvatarSBGWidth: 24px;
+@define AvatarSBGHeight: 24px;
+@define AvatarSImageWidth: 100%;
+@define AvatarSImageHeight: 100%;
+@define AvatarSWidth: 40px;
+@define AvatarSWidthMax: 400px;
+@define AvatarSHeight: 22px;
+
+@define GGTextPanelWidth: 60px;
+@define GGTextPanelHeight: 24px;
+
+@define GGIconPanelWidth: 44px;
+@define GGIconPanelHeight: 18px;
+
+@define SkullSize: 25px;
+
+                                                                               
+   
+                                                                               
+
+CSGOHudTeamCounter
+{
+    opacity: 1.0;
+	transition-property: opacity;
+	transition-timing-function: linear;
+    transition-duration: 0.1s;
+    background-color: #ffffff00;
+}
+
+CSGOHudTeamCounter Label
+{
+    font-family: Stratum2 Bold, 'Arial Unicode MS';
+}
+
+
+
+                                                                               
+                                                                        
+                                                               
+                                                                               
+
+.TeamCounter__Flow--Up
+{
+    flow-children: up;
+}
+
+.TeamCounter__Flow--Down
+{
+    flow-children: down;
+}
+
+.TeamCounter__Align--Top
+{
+    vertical-align: top;
+}
+
+.TeamCounter__Align--Bottom
+{
+    vertical-align: bottom;
+}
+
+.TeamCounter__Align--Top #TeamCounterBG,
+.TeamCounter__Align--Top #ArsenalProgress
+{
+    flow-children: down;
+    padding-top: 2px;
+}
+
+.TeamCounter__Align--Bottom #TeamCounterBG,
+.TeamCounter__Align--Bottom #ArsenalProgress
+{
+    flow-children: up;
+    margin-bottom: 2px;
+}
+
+.TeamCounter__Align--Top #TeamLargeCT,
+.TeamCounter__Align--Top #TeamLargeT,
+.TeamCounter__Align--Top #ScoreAndTime,
+.TeamCounter__Align--Top #AliveBackgroundCT,
+.TeamCounter__Align--Top #AliveBackgroundT
+{
+    vertical-align: top;
+}
+
+#TeamLargeCT,
+#TeamSmallContainerCT
+{
+    horizontal-align: right;
+	margin-right: -2px;
+}
+#TeamLargeT,
+#TeamSmallContainerT
+{
+	margin-left: 6px;
+    horizontal-align: left;
+}
+
+#TeamSmallContainerCT,
+#TeamSmallContainerT
+{
+	margin-top: 1px;
+}
+
+#TeamSmallContainerCT,
+#TeamSmallContainerT
+{
+	width: AvatarSWidthMax;
+}
+.TeamCounter__Align--Top #TeamSmallContainerCT,
+.TeamCounter__Align--Top #TeamSmallContainerT
+{
+    flow-children: down;
+    vertical-align: top;
+}
+
+.TeamCounter__Align--Top #TeamSmallCT__Row2,
+.TeamCounter__Align--Top #TeamSmallT__Row2
+{
+    margin-top: 2px;
+}
+
+.TeamCounter__Align--Bottom #TeamLargeCT,
+.TeamCounter__Align--Bottom #TeamLargeT,
+.TeamCounter__Align--Bottom #ScoreAndTime,
+.TeamCounter__Align--Bottom #AliveBackgroundCT,
+.TeamCounter__Align--Bottom #AliveBackgroundT
+{
+    vertical-align: bottom;
+}
+
+.TeamCounter__Align--Bottom #TeamSmallContainerCT,
+.TeamCounter__Align--Bottom #TeamSmallContainerT
+{
+    flow-children: up;
+    vertical-align: bottom;
+}
+
+.TeamCounter__Align--Bottom #TeamSmallCT__Row2,
+.TeamCounter__Align--Bottom #TeamSmallT__Row2
+{
+    margin-bottom: 2px;
+}
+
+  .team__large_container--left {
+    horizontal-align: right;
+    width: fill-parent-flow( 1.0);
+}
+
+.team__large_container--right {
+    horizontal-align: left;
+    width: fill-parent-flow( 1.0);
+}
+
+.TeamCounter__Align--Bottom .team__large_container--left,
+.TeamCounter__Align--Bottom .team__large_container--right {
+    vertical-align:bottom;
+}
+
+.TeamCounter__Align--Top .team__large_container--left,
+.TeamCounter__Align--Top .team__large_container--right {
+    vertical-align:top;
+}
+
+#TeamCounterBG
+{
+    width: 1920px;
+    height: 256px;
+    horizontal-align: center;
+    opacity: 1.0;
+	overflow:noclip;
+}
+
+#Visible
+{
+    visibility: visible;
+    flow-children: none;
+}
+
+#Invisible
+{
+    visibility: collapse;
+}
+
+.preserveSize.AvatarL__Skull {
+    background-size: 92% 92%;
+}
+
+.hidden {
+	visibility: collapse;
+}
+
+
+                                                                               
+                         
+                                                                               
+
+.Avatar
+{
+    flow-children: down;
+	
+}
+
+.AvatarImage
+{
+	vertical-align: center;
+	
+	
+}
+
+
+
+#AvatarL__ImageBG.AvatarImageT__Color.AvatarL__Default--T.Avatar__PlayerBorder--T
+{
+    visibility: visible;
+}
+
+#AvatarL__ImageBG.AvatarImageCT{
+	border: 20px solid #FFFFFF;
+}
+
+#Avatar__Image.Avatar__CommonMargin.AvatarL__Internal
+{
+	position: absolute;
+	background-position: 50% 50%;
+    visibility: visible;
+}
+
+
+
+.Avatar__HealthMargin
+{
+                       
+                        
+    margin-bottom: 0px;
+}	
+
+.AvatarImageCT__Color
+{
+	
+    background-color: #72859dDD;
+	border: 2px solid #FFFFFF;
+}
+
+.AvatarImageCT__InternalColor
+{
+    background-color: #FFFFFF;
+}
+
+.AvatarImageT__Color
+{
+	
+    background-color: #987344E0;
+	border: 2px solid #8a6a41;
+}
+
+.AvatarImageT__InternalColor
+{
+    background-color: #FFFFFF;
+	
+}
+
+.Avatar__PlayerOutline--None
+{
+    border: 0px solid #00000000;
+}
+ 
+.Avatar__PlayerOutline--White
+{
+    border: 3px solid white;
+}
+
+.Avatar__PlayerOutline--Spectate
+{
+    border: 3px solid #D8D8D8D8;
+}
+
+.Avatar__PlayerOutline--CT
+{
+   
+	background-color: #7C858F;
+	border: 2px solid #4F5D6D;
+	
+	opacity: 1;
+}
+
+.Avatar__PlayerOutline--T
+{
+	background-color: #756337;
+	border: 2px solid #87663e;
+	
+	opacity: 1;
+}
+
+.Avatar__PlayerOutline--Spectate .Avatar__CommonMargin,
+.Avatar__PlayerOutline--White .Avatar__CommonMargin,
+.Avatar__PlayerOutline--CT .Avatar__CommonMargin,
+.Avatar__PlayerOutline--T .Avatar__CommonMargin
+{
+    margin: 0px;
+}
+.Avatar__PlayerOutline--Spectate .AvatarL__Internal,
+.Avatar__PlayerOutline--White .AvatarL__Internal
+{
+    vertical-align: top;
+	background-color: #FFFFFFFF;
+}
+
+.Avatar__PlayerOutline--White .Avatar__HealthMargin,
+.Avatar__PlayerOutline--Spectate .Avatar__HealthMargin,
+.Avatar__PlayerOutline--CT .Avatar__HealthMargin,
+.Avatar__PlayerOutline--T .Avatar__HealthMargin
+{
+    margin: 0px;
+}
+
+.Avatar__PlayerOutline--White .AvatarL__HealthBarBG,
+.Avatar__PlayerOutline--Spectate .AvatarL__HealthBarBG,
+.Avatar__PlayerOutline--CT .AvatarL__HealthBarBG,
+.Avatar__PlayerOutline--T .AvatarL__HealthBarBG
+{
+    margin: 0px;
+}
+
+.Avatar__PlayerBorder--CT
+{
+    border: 1px solid color-CT-score;
+	
+}
+
+.Avatar__PlayerBorder--T
+{
+    border: 1px solid color-T-score;
+	
+}
+
+.Avatar__Bot--CT
+{
+    wash-color-fast: #d0f0ffDD;
+}
+
+.Avatar__Bot--T
+{
+    wash-color-fast: #fff1cfDD;
+}
+
+.Avatar__SoundWithShadow
+{
+    width: fit-children;
+    height: fit-children;
+    flow-children: none;
+}
+
+.Avatar__Sound--1Animate
+{
+    opacity: 0.0;
+	animation-name: Avatar__Sound--1Animate;
+	animation-duration: 0.25s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+@keyframes 'Avatar__Sound--1Animate'
+{
+	0%
+	{
+        opacity: 0.0;
+    }
+    20%
+	{
+        opacity: 1.0;
+	}
+    80%
+	{
+        opacity: 1.0;
+	}
+    100%
+	{
+        opacity: 0.0;
+	}
+}
+
+.Avatar__Sound--2Animate
+{
+    opacity: 0.0;
+	animation-name: Avatar__Sound--2Animate;
+	animation-duration: 0.25s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+@keyframes 'Avatar__Sound--2Animate'
+{
+	0%
+	{
+        opacity: 0.0;
+    }
+    40%
+	{
+        opacity: 1.0;
+	}
+    60%
+	{
+        opacity: 1.0;
+	}
+    100%
+	{
+        opacity: 0.0;
+	}
+}
+
+#ArsenalProgress
+{
+    horizontal-align: center;
+    height: fit-children;
+}
+
+.Avatar__HealthBar--Red
+{
+	background-color: #EA5151;
+	-s2-mix-blend-mode: normal;
+}
+
+.Avatar__HealthBar--Normal
+{
+    background-color: #8fa387;
+	-s2-mix-blend-mode: normal;
+}
+
+
+.Avatar__BG--Hidden.AvatarS__Default--CT,
+.Avatar__BG--Hidden.AvatarS__Default--T,
+.Avatar__BG--Hidden.AvatarL__Default--CT,
+.Avatar__BG--Hidden.AvatarL__Default--T
+{
+    background-image: none;
+}
+
+
+                                                                               
+                                       
+                                                                               
+
+.AvatarLargeSnippet--ScaleSmaller
+{
+    ui-scale: 88% 88% 100%;
+}
+
+.AvatarL
+{
+    width: 62px;
+    height: 62px;
+    margin-left: -2.25px;
+    margin-right: -2.25px;
+
+    overflow: noclip;
+
+
+}
+
+.Avatar__CommonMargin
+{
+    margin: 2px 1px 5px 1px;
+}
+
+.AvatarL__ImageBG
+{
+    height: 58px;
+	width: 85%;
+}
+
+/* yaya */
+
+.Avatar__PlayerOutline--White .Avatar__CommonMargin,
+.Avatar__PlayerOutline--Spectate .Avatar__CommonMargin
+{
+    margin: 0px -2px 0px -2px;
+}
+*/
+
+.AvatarL__Internal
+{
+    width: 100%;
+    height: 112%;
+    horizontal-align: middle;
+    vertical-align: top;
+    background-color: #00000000;
+}
+
+
+.AvatarL__HealthBar
+{
+    vertical-align: bottom;
+    height: 4px;
+	margin: 0px 1px 1px 1px;
+	
+	opacity: 0.9;
+}
+
+.AvatarL_HealthBarBG
+{
+	vertical-align: bottom;
+	margin-bottom: 1.5px;
+    margin-right: 1.5px;
+    margin-left: 1.5px;
+    height: 4.55px;
+	width: 100%;
+	background-color: #00000040;
+	position: absolute;
+	opacity: 1;
+	
+
+}
+
+.AvatarL__Default--CT
+{
+	
+	background-image: url( "file://{images}/hud/teamcounter/teamcounter_alivebgCT.png" );
+	background-size: 92% 86%;
+    background-position: 50% 25%;
+	
+    background-repeat: no-repeat;
+	
+}
+
+.AvatarL__Default--T
+{
+	
+	background-image: url( "file://{images}/hud/teamcounter/teamcounter_alivebgT.png" );
+    background-size: 92% 86%;
+    background-position: 50% 25%;
+	
+    background-repeat: no-repeat;
+	
+}
+
+.AvatarL__Bot
+{
+    width: 40px;
+    height: 40px;
+    x: -5px;
+    y: 6px;
+    horizontal-align: center;
+    -s2-mix-blend-mode: additive;
+	opacity: 0.8;
+}
+
+.AvatarL__Skull
+{
+    width: 42px;
+    height: 42px;
+    x: 4.5px;
+    y: 9px;
+    text-shadow-fast: 0px 1px #00000026;
+    margin: 0px 0px 0px 0px;
+}
+
+.AvatarL__PlayerColor
+{
+    y: -2px;
+
+    width: 24px;
+    height: 15px;
+	padding-bottom: 4px;
+	margin-right: 9.5px;
+	opacity: 0.9;
+	brightness: 1.4;
+
+    horizontal-align: center;
+
+    img-shadow: 0px 2px 1px 1.2 #000000BB;
+	z-index: 1;
+}
+
+.avatar-speaking
+{
+    width: 34px;
+    height: 34px;
+
+	horizontal-align: left;
+	vertical-align: bottom;
+	wash-color: #DDDDDD;
+
+    padding-left: 0px;
+    margin-left: 0px;
+	margin-bottom: 2px;
+}
+
+.avatar-s-speaking
+{
+    width: 20px;
+    height: 20px;
+
+	horizontal-align: center;
+	vertical-align: center;
+	wash-color: #BBBBBB;
+
+    padding-left: -5px;
+	padding-bottom: 2px;
+                         
+    opacity: 0.8;
+}
+
+.AvatarL__Sound
+{
+    x: 20px;
+    y: 36px;
+    flow-children: right;
+                                           
+                                   
+    opacity: .8;
+}
+
+.AvatarL__Sound--2
+{
+    margin-top: 3px;
+    margin-right: 2px;
+}
+
+.AvatarL__Sound--1
+{
+    margin-top: 6px;
+    margin-right: 2px;
+}
+
+.AvatarL__Sound--Off
+{
+}
+
+.AvatarL__SoundShadow--2
+{
+    margin-top: 3px;
+    margin-right: 2px;
+    blur: gaussian( 2 );
+    transform: translate3d( 2px, 2px, 0px );
+    wash-color: black;
+}
+
+.AvatarL__SoundShadow--1
+{
+    margin-top: 6px;
+    margin-right: 2px;
+    blur: gaussian( 2 );
+    transform: translate3d( 2px, 2px, 0px );
+    wash-color: black;
+}
+
+.AvatarL__SoundShadow--Off
+{
+    blur: gaussian( 2 );
+    transform: translate3d( 2px, 2px, 0px );
+    wash-color: black;
+}
+
+.AvatarL__PlayerLetter
+{
+    y: -26px;
+    horizontal-align: center;
+    text-shadow: 2px 2px 2px 2.0 black;
+}
+
+.AvatarL__Spectate
+{
+}
+
+.AvatarL__Dominated
+{
+    width: 54px;
+    height: 54px;
+    y: 5px;
+    x: 3px;
+
+}
+
+.AvatarL__Nemesis
+{
+    width: 42px;
+    height: 42px;
+    x: 10px;
+    y: 8px; 
+    opacity: 0.7;  
+}
+
+.AvatarL__GGTextBG
+{
+    width: GGTextPanelWidth;
+    height: GGTextPanelHeight;
+    horizontal-align: center;
+    background-color: #0000006f;
+    border-radius: 0px;
+}
+
+.AvatarL__GGText
+{
+    font-weight: bold;
+    font-size: 22px;
+    horizontal-align: center;
+    vertical-align: center;
+}
+
+.AvatarL__GGText--Player
+{
+    color: #FFFFFF;
+}
+
+.AvatarL__GGText--Bot
+{
+    color: #ffffff33;
+}
+
+.AvatarL__GGIconBG
+{
+    width: GGTextPanelWidth;
+    margin-top: 4px;
+                                  
+    padding: 2px;
+}
+
+.AvatarL__GGIcon
+{
+    height:20px;
+    horizontal-align: center;
+    img-shadow: 0px 0px 1px 1.0 #00000099;
+                                                  
+    overflow:clip;
+}
+
+                                                                               
+                                       
+                                                                               
+
+.AvatarS
+{
+	width: 42px;
+    height: 24px;
+    margin-left: 1px;
+    margin-right: 5px;
+	margin-bottom: 1px;
+	margin-top: 0px;
+}
+
+
+#AvatarS__ImageBG
+{
+    width: 100%;
+    height: 100%;
+}
+
+.AvatarS__Internal
+{
+    width: 100%;
+    height: 100%;
+    horizontal-align: center;
+    vertical-align: middle;   
+    background-color: #7f7f7f; 
+}
+
+.AvatarS__PlayerImage 
+{
+	vertical-align: middle;
+	width: 100%;
+    height: 100%;
+    background-color: black;
+}
+
+.AvatarS__PlayerImage .AvatarImage
+{
+	width: 100%;
+	height: 100%;
+}
+
+.AvatarS__HealthBar
+{
+    vertical-align: bottom;
+    height: 3px;
+}
+
+.AvatarS__Default--CT
+{
+	background-image: url( "file://{images}/hud/teamcounter/teamcounter_alivebgCT.png" );
+	background-size: 100% auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-top: 1px solid #7da1bfDD;
+	border-left: 1px solid #7da1bfDD;
+	border-right: 1px solid #7da1bfDD;
+	border-bottom: 4px solid #7da1bfEE;
+	box-shadow: #00000078 -1px -1px 0px 2px;
+}
+
+.AvatarS__Default--T
+{
+	background-image: url( "file://{images}/hud/teamcounter/teamcounter_alivebgT.png" );
+    background-size: 100% auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-top: 1px solid #a19570;
+	border-right: 1px solid #a19570DD;
+	border-left: 1px solid #a19570DD;
+	border-bottom: 4px solid #a19e77EE;
+	box-shadow: #00000078 -1px -1px 0px 2px;
+}
+
+.AvatarS__Default--CT .AvatarS__HealthBar
+{
+	background-color: #7da1bf;
+}
+
+.AvatarS__Default--T .AvatarS__HealthBar
+{
+	background-color: #c7b98d;
+}
+
+.AvatarS__Overlay--Empty
+{
+    opacity: 0;
+}
+
+.AvatarS__Skull
+{
+    width: 23px;
+    height: 95%;
+    horizontal-align: center;
+    vertical-align: top;
+}
+
+.Avatar__Skull--White
+{
+    wash-color-fast: #252525;
+    opacity: 0.25;
+}
+
+.Avatar__Skull--Red
+{
+    wash-color-fast: #252525;
+    opacity: 0.32;
+}
+
+.Avatar__Skull--CT
+{
+    wash-color-fast: #2F2F2F;
+    opacity: 0.6;
+}
+
+.Avatar__Skull--T
+{
+    wash-color-fast: #2F2F2F;
+    opacity: 0.6;
+}
+
+
+.AvatarS__Bot
+{
+    width: 21px;
+    height: 21px;
+
+    x: 0px;
+    y: 0px;
+    horizontal-align: center;
+	-s2-mix-blend-mode: additive;
+	opacity: 1;
+                                   
+}
+
+.AvatarS__Dominated
+{
+    width: 30px;
+    height: 30px;
+    x: 1px;
+    y: -2px;
+}
+
+.AvatarS__Nemesis
+{
+    width: 16px;
+    height: 28px;
+    x: 13px;
+    y: -1px;  
+}
+
+.AvatarS__Sound
+{
+    x: 2px;
+    y: 6px;
+    flow-children: right;
+    vertical-align: middle;
+    img-shadow: 1px 1px 1px 1.0 #0000003b;
+                                               
+                                    
+    opacity: .5;
+}
+
+.AvatarS__Sound--2
+{
+    x: 20px;
+    y: 0px;
+    vertical-align: middle;
+    img-shadow: 1px 1px 1px 1.0 #0000003b;
+}
+
+.AvatarS__Sound--1
+{
+    x: 15px;
+    y: 0px;
+    vertical-align: middle;
+    img-shadow: 1px 1px 1px 1.0 #0000003b;
+}
+
+.AvatarS__Sound--Off
+{
+}
+
+.AvatarS__SoundShadow--2
+{
+    margin-top: 3px;
+    margin-right: 2px;
+    blur: gaussian( 2 );
+    transform: translate3d( 2px, 2px, 0px );
+    wash-color: black;
+}
+
+.AvatarS__SoundShadow--1
+{
+    margin-top: 6px;
+    margin-right: 2px;
+    blur: gaussian( 2 );
+    transform: translate3d( 2px, 2px, 0px );
+    wash-color: black;
+}
+
+.AvatarS__SoundShadow--Off
+{
+    blur: gaussian( 2 );
+    transform: translate3d( 2px, 2px, 0px );
+    wash-color: black;
+}
+
+.AvatarS__Spectate
+{
+}
+
+                                                                               
+   
+                                                                               
+
+#TeamCounter
+{
+    flow-children: right;
+    horizontal-align: center;
+    width: 100%;
+	overflow: noclip;
+}
+
+.Team__All
+{
+    flow-children: right;
+    width: fit-children;
+    height: fit-children;
+    horizontal-align: center;
+}
+
+.Team__Large
+{
+    flow-children: right;
+    width: fit-children;
+    height: fit-children;
+    margin-left: 1px;
+    margin-right: 1px;
+}
+
+.Team__SmallCT
+{
+    flow-children: right-wrap;
+    horizontal-align: right;
+    width: fit-children;
+    height: fit-children;
+                       
+    margin-right: 1px;
+}
+
+.Team__SmallT
+{
+    flow-children: right-wrap;
+    width: fit-children;
+    height: fit-children;
+    margin-left: 1px;
+                        
+}
+
+.TeamCounter__AliveCT
+{
+    width: 50px;
+    height: 53px;
+    margin-right: 3px;
+    flow-children: down;
+	background-image: url( "file://{images}/hud/ct.png" );
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+	margin-bottom: 2px;
+    
+    horizontal-align: right;
+}
+
+.TeamCounter__AliveT
+{
+    width: 50px;
+    height: 53px;
+    margin-left: 3px;
+    flow-children: down;
+	background-image: url( "file://{images}/hud/t.png" );
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+	margin-bottom: 2px;
+    
+    horizontal-align: left;
+}
+
+.TeamCounter__AliveCount
+{
+    horizontal-align: center;
+    text-align: center;
+    margin-top: 2px;
+	margin-bottom: -11px;
+    
+
+    font-weight: bold;
+    font-size: 40px;
+    text-shadow: 0px 0px 2px 4.0 #000000;
+    color: white;
+}
+
+.TeamCounter__AliveText
+{
+    horizontal-align: center;
+	font-weight: light;
+    text-align: middle;
+    font-size: 13px;
+    text-shadow: 1px 1px 1px 2.0 #000000;
+	letter-spacing: 0px;
+    color: #999999;
+	opacity: 0.57;
+	margin-top: -1px;
+}
+
+.TeamCounter__AliveSkull
+{
+    horizontal-align: center;
+    vertical-align: center;
+    margin-top: 8px;
+}
+
+#ScoreAndTimeAndBomb
+{
+    flow-children: none;
+    horizontal-align: middle;
+    width: ScoreAndTimeWidth;
+    height: fit-children;
+	margin-right: 1px;
+	margin-left: 1px;
+}
+
+#ScoreAndTime
+{
+    flow-children: down;
+    horizontal-align: middle;
+    width: 100%;
+    height: fit-children;
+}
+
+#GameTime
+{
+    width: 100%;
+    height: 27px;
+}
+
+#Timer
+{
+    width: 100%;
+    height: 100%;
+    flow-children: none;
+    background-color: #000000D4;
+	margin-bottom: 1px;
+}
+
+.teamcounter_timer
+{
+    margin-left: 2px;
+	margin-top: -3px;
+    margin-bottom: 4px;
+    horizontal-align: middle;
+    vertical-align: middle;
+    text-align: center;
+    font-weight: bold;
+    font-size: 28px;
+    letter-spacing: 0px;
+    color: white;
+    -s2-mix-blend-mode: screen;
+}
+
+.teamcounter_timer.teamcounter_red_timer
+{
+    margin-left: 0px;
+    color: red;
+}
+
+.TeamCounter__Align--Top #BombStatus
+{
+    y: -16px;
+    width: 100%;
+    height: ScoreAndTimeWidth;
+
+    horizontal-align: middle;
+
+                            
+}
+
+.TeamCounter__Align--Bottom #BombStatus
+{
+    y: -9px;
+    width: 100%;
+    height: ScoreAndTimeWidth;
+
+    horizontal-align: middle;
+    
+                            
+}
+
+.bomb_planted
+{
+    width: 50%;
+    height: 60%;
+    x: 30%;
+    vertical-align: middle;
+    -s2-mix-blend-mode: SRGBadditive;
+    wash-color: #b80000;
+}
+
+.bomb_planted.bomb_line
+{
+    x: 30%;
+    width: 50%;
+    height: 60%;
+    vertical-align: middle;
+    -s2-mix-blend-mode: SRGBadditive;
+    wash-color: #b80000;
+}
+
+.bomb_defused
+{
+    horizontal-align: middle;
+    vertical-align: middle;
+    width: 80%;
+                  
+    x: 7px;
+    padding: 2px;
+    -s2-mix-blend-mode: additive;
+    wash-color: #45aa2e;
+}
+
+.BombPlantedPulse__Slow
+{
+    opacity: 1.0;
+    animation-name: bombDet;
+    animation-duration: 0.8s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;	
+}
+
+.BombPlantedPulse__Medium
+{
+    opacity: 1.0;
+    animation-name: bombDet;
+    animation-duration: 0.5s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;	
+}
+
+.BombPlantedPulse__Fast
+{
+    opacity: 1.0;
+    animation-name: bombDet;
+    animation-duration: 0.3s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;	
+}
+
+@keyframes 'bombDet'
+{
+    0%
+    {
+        opacity: 0.5;
+    }
+    50%
+    {
+        opacity: 1.0;
+     }
+    100%
+    {
+        opacity: 0.5;
+    }
+}
+
+.BombPlantedLines__Slow
+{
+                    
+    animation-name: bombLines;
+    animation-duration: 0.8s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;	
+}
+
+.BombPlantedLines__Medium
+{
+                    
+    animation-name: bombLines;
+    animation-duration: 0.5s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;	
+}
+
+.BombPlantedLines__Fast
+{
+                    
+    animation-name: bombLines;
+    animation-duration: 0.3s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;	
+}
+
+@keyframes 'bombLines'
+{
+    0%
+    {
+        opacity: 0.0;
+        transform: scale3d( 1, 1, 1 );
+    }
+    50%
+    {
+        opacity: 1.0;
+        transform: scale3d( 1.2, 1.2, 1 );
+    }
+    100%
+    {
+        opacity: 0.0;
+        transform: scale3d( 1.4, 1.4, 1 );
+    }
+}
+
+#GameScore
+{
+    margin-top: 1px;
+
+    width: 100%;
+    height: 27px;
+    flow-children: right;
+}
+
+.GameScore__BGL
+{
+    width: GameScoreWidth;
+    margin-right: 1px;
+    background-color: #000000D4;
+    height: 24px;
+}
+
+.GameScore__BGR
+{
+    width: GameScoreWidth;
+    background-color: #000000D4;
+    height: 24px;
+	margin-left: 1px;
+}
+
+.TeamScoreCT
+{
+    margin-top: -1px;
+    color: #6f9ec4;
+    -s2-mix-blend-mode: additive;
+}
+
+.TeamScoreT
+{
+    margin-top: -1px;
+    color: #B99636;
+    -s2-mix-blend-mode: additive;
+}
+
+.TeamScore
+{
+    horizontal-align: center;
+    vertical-align: center;
+
+    text-align: center;
+
+    font-size: 22px;
+    font-weight: bold;
+
+    padding-top: 1px;
+}
+
+                              
+                              
+                              
+
+.hrTop { 
+	width: 100%;
+	height: 1px;
+	background-color: gradient( linear, 100% 0%, 0% 0%, from( #ffffff00 ), color-stop( 0.20, #ffffff00 ) , color-stop(0.5, #ffffff45), color-stop( 0.80, #ffffff00 ), to( #ffffff00 ) );
+	vertical-align: top;
+	opacity: 0;            
+}
+
+.Teamcounter_decider{
+	width: 930px;
+	height: 180px;
+	background-color: gradient( linear, 0% 100%, 0% 0%, from( #00000000 ), color-stop( 0.4, #0000004D ), to( #0000004D ) );
+	right-border: 3px gradient( linear, 0% 100%, 0% 0%, from( #00000000 ), color-stop( 0.4, #0000001A ), to( #0000001A ) ); 
+	left-border: 3px gradient( linear, 0% 100%, 0% 0%, from( #00000000 ), color-stop( 0.4, #0000001A ), to( #0000001A ) ); 
+	left-border: 3px solid #0000001A;
+}
+
+.JoinPanel--Animate-FadeIn
+{
+    opacity: 1;
+	animation-name: JoinPanel--Animate-FadeIn;
+	animation-duration: 0.6s;  /* 0.6s */
+	animation-timing-function: linear;
+	animation-iteration-count: 1;
+}
+
+@keyframes 'JoinPanel--Animate-FadeIn'
+{
+	0%
+	{
+        opacity: 0.0;
+        transform: translateY( -35px );       
+    }
+    100%
+	{
+        opacity: 1.0;
+        transform: translateY( 0px );   
+	}
+}
+
+.JoinPanel--Animate-FadeOut
+{
+    opacity: PermenentTeamPopup; /* change in csgostyles.css */
+	animation-name: JoinPanel--Animate-FadeOut;
+	animation-duration: 0.6s; /* 0.6s */
+	animation-timing-function: linear;
+	animation-iteration-count: 1;
+}
+
+@keyframes 'JoinPanel--Animate-FadeOut'
+{
+	0%
+	{
+        opacity: 1.0;
+        transform: translateY( 0px );        
+    }
+    100%
+	{
+        opacity: 0.0;
+        transform: translateY( -35px );
+	}
+}
+
+.JoinPanelRoot
+{
+    flow-children: none;
+    horizontal-align: center;
+	vertical-align: top;
+	overflow: noclip;
+	
+	margin-top: 1px;
+
+	transform: translatez(-10px);
+	transform: translatey(-6px);
+
+}
+
+.JoinPanel
+{
+    flow-children: none;
+    horizontal-align: center;
+    width: 625px;
+    height: 56px;
+	background-image: url( "file://{images}/hud/fade.png" );
+    background-size: 100% 100%;
+    background-img-opacity: 1.0;
+                                                                                               
+}
+
+.JoinPanelInner
+{
+    x: 2px;
+    y: 2px;
+    width: 622px;
+    height: 66px;
+}
+
+                                                                                                                                                                                                   
+.Language_vietnamese CSGOHudTeamCounter .JoinPanel Label 
+{
+	font-family: 'Arial', 'Arial Unicode MS';
+}
+
+.TeamBG__CTDefaultLogo
+{
+	horizontal-align: left;
+	margin-left: 0px;
+	margin-top: 2px;
+	height: 75%;
+	
+	opacity: 0.95;
+	visibility: visible;
+}
+
+.TeamBG__TDefaultLogo
+{
+	horizontal-align: right;
+	margin-right: 0px;
+	margin-top: 2px;
+	height: 75%;
+	
+	opacity: 0.95;
+	visibility: visible;
+}
+
+#JoinTextT,
+#JoinTextCT,
+#JoinTextBot
+{
+    font-size: 30px;
+    font-weight: black;
+    horizontal-align: center;
+    vertical-align: top;
+    letter-spacing: 0px;
+    margin-top: 6px;
+	opacity: 0.85;
+}
+
+.JoinTextCT
+{
+	-s2-mix-blend-mode: additive;
+	opacity: 0.85;
+	color: #d7e9f7;
+}
+
+.JoinTextT
+{
+	-s2-mix-blend-mode: additive;
+	opacity: 0.85;
+	color: #f2e7c7;
+}
+
+#JoinTextBot
+{
+	color: #ffffff;
+}
+
+
+.GameModeGunGameProgressive #TeamCounter
+{
+    flow-children: down;
+}

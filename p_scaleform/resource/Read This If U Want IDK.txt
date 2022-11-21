@@ -1,0 +1,3 @@
+overviews folder has the old csgo map radars if u dont want them just delete/rename it
+
+the nuke one is wrong its from the 2014 version but #iDontCare

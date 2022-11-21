@@ -1,0 +1,52 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/csgostyles.css" />
+		<include src="file://{resources}/styles/hud/hudvote.css" />
+	</styles>
+
+	<CSGOHudVote hittest="false" class="hud-vote">
+	
+		<Panel class="hud-vote-header vote-header-callvote">
+			<Image id="VoteHeaderIcon" class="hud-vote-header__icon afxhidden" src="file://{images}/icons/ui/competitive.svg"/>
+			<Label class="hud-vote-header__label" text="#Panorama_Vote_Header"/>
+		</Panel>
+		
+		<Panel class="hud-vote-header vote-header-passed">
+			<Image id="VoteHeaderIcon" class="hud-vote-header__icon" src="file://{images}/icons/ui/yesvote.png"/>
+			<Label class="hud-vote-header__label" text="#Panorama_Vote_Passed" html="true"/>
+		</Panel>
+		
+		<Panel class="hud-vote-header vote-header-failed">
+			<Image id="VoteHeaderIcon" class="hud-vote-header__icon" src="file://{images}/icons/ui/novote.png"/>
+			<Label class="hud-vote-header__label" text="#Panorama_Vote_Failed" html="true"/>
+		</Panel>
+		
+		<Panel class="hud-vote-body">
+			<Label id="VoteDescLabel" class="hud-vote-body__label" html="true"/>
+			
+			<Panel class="hud-vote-boxes">
+			
+				<Panel class="hud-vote-box hud-vote-yesbox">
+					<Image class="yes-logo vote-logo" src="file://{images}/icons/ui/yesvote.png"/>
+					<Label class="hud-vote-boxes-label" text="{d:r:yes_votes}"/>
+				</Panel>
+				
+				<Panel class="hud-vote-box">
+					<Image class="no-logo vote-logo" src="file://{images}/icons/ui/novote.png"/>
+					<Label class="hud-vote-boxes-label red" text="{d:r:no_votes}"/>
+				</Panel>
+				
+			</Panel>
+		</Panel>
+		
+		<Panel class="hud-vote-footer">
+			<Label class="footer__cast-vote-label" text="#Panorama_Local_Player_Vote" html="true"/>
+			
+			<Panel class="footer__vote-binding">
+				<Label class="horizontal-align-left footer__vote-binding-label" text="#Panorama_vote_yes_pc_instruction" html="true"/>
+				<Label class="horizontal-align-right footer__vote-binding-label" text="#Panorama_vote_no_pc_instruction" html="true"/>
+			</Panel>
+			
+		</Panel>
+	</CSGOHudVote>
+</root>

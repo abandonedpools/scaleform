@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+
+<svg
+   version="1.1"
+   x="0px"
+   y="0px"
+   width="25"
+   height="29.6"
+   viewBox="0 0 25 29.6"
+   enable-background="new 0 0 24 32"
+   xml:space="preserve"
+   id="svg11"
+   sodipodi:docname="decoy.svg"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><defs
+   id="defs15" /><sodipodi:namedview
+   id="namedview13"
+   pagecolor="#ffffff"
+   bordercolor="#666666"
+   borderopacity="1.0"
+   inkscape:pageshadow="2"
+   inkscape:pageopacity="0.0"
+   inkscape:pagecheckerboard="0"
+   showgrid="false"
+   inkscape:zoom="13"
+   inkscape:cx="-1.1923077"
+   inkscape:cy="9.0384615"
+   inkscape:window-width="1920"
+   inkscape:window-height="1017"
+   inkscape:window-x="1912"
+   inkscape:window-y="-8"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="svg11" />
+<g
+   id="Selected_Items"
+   transform="matrix(1.0377281,0,0,0.97830982,0.25667322,-2.6258924)">
+	<g
+   id="g7">
+		<g
+   id="Selected_Items_56_">
+			<path
+   fill-rule="evenodd"
+   clip-rule="evenodd"
+   fill="#ffffff"
+   d="m 17.921,13.187 -1.528,-0.879 v 1.796 l -0.917,0.841 v 1.795 h -0.382 v 1.835 h 0.382 v 1.91 h -0.382 v 1.834 h 0.382 v 1.91 h -0.382 v 1.833 h 0.382 v 1.758 l 0.917,1.566 v 1.299 c 0,0.356 -0.178,0.536 -0.536,0.536 h -6.8 c -0.356,0 -0.534,-0.18 -0.534,-0.536 V 29.386 L 9.4,27.82 V 26.062 H 9.821 V 24.229 H 9.4 v -1.91 H 9.821 V 20.485 H 9.4 v -1.91 H 9.821 V 16.74 H 9.4 V 14.945 L 8.522,14.104 v -2.445 c 0,-0.356 0.178,-0.535 0.534,-0.535 h 0.535 l 1.146,-0.993 V 8.601 C 10.125,8.526 9.82,8.233 9.82,7.723 c 0,-0.33 0.114,-0.548 0.344,-0.649 0.127,-0.076 0.382,-0.115 0.764,-0.115 h 4.202 l 3.554,5.694 v 12.034 l -1.795,0.879 c -0.255,0.127 -0.446,0.089 -0.573,-0.115 -0.128,-0.229 -0.077,-0.445 0.152,-0.649 0.204,-0.178 0.51,-0.382 0.917,-0.611 l 0.536,-0.266 z"
+   id="path2" />
+			<path
+   fill-rule="evenodd"
+   clip-rule="evenodd"
+   fill="#ffffff"
+   fill-opacity="0.851"
+   d="M 5.847,3.062 V 5.431 L 7.872,4.247 8.713,5.698 6.611,6.921 8.713,8.143 7.872,9.595 5.847,8.449 v 2.369 H 4.127 V 8.374 L 1.989,9.595 1.148,8.143 3.288,6.921 1.148,5.698 1.989,4.247 4.127,5.507 V 3.062 Z m 17.881,5.195 -1.528,0.918 1.566,0.878 -0.649,1.109 -1.528,-0.879 v 1.757 h -1.261 v -1.796 l -1.605,0.918 -0.611,-1.109 1.529,-0.878 -1.529,-0.918 0.65,-1.107 1.566,0.917 V 6.234 h 1.261 V 8.029 L 23.117,7.15 Z M 5.006,19.72 3.478,18.842 v 1.757 H 2.218 V 18.804 L 0.613,19.72 0.001,18.613 1.567,17.734 0.001,16.816 0.651,15.71 2.217,16.626 v -1.834 h 1.261 v 1.796 l 1.528,-0.878 0.612,1.106 -1.529,0.918 1.567,0.879 z"
+   id="path4" />
+		</g>
+	</g>
+</g>
+<g
+   id="guides"
+   transform="matrix(1.0377281,0,0,0.97830982,0.25667322,-2.6258924)">
+</g>
+</svg>

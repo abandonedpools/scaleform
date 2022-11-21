@@ -1,0 +1,215 @@
+                                                                               
+                                                                              
+                                                                               
+.friendlobby
+{
+	height: fit-children;
+	width: 365px;
+	opacity : 1;
+	transform: translatex( 0px );
+	flow-children: down;
+	margin: 1px 0px;
+	border-bottom: 1px solid #ffffff20;
+	
+	transition-property: height, opacity, transform, position, background-color;
+	transition-duration: .5s, .5s, .5s, .5s, .25s ;
+	transition-timing-function: ease-in-out;
+}
+
+.friendlobby.hidden
+{
+	opacity: 0;
+	transform: translatex( 64px );
+
+	transition-property: transform, opacity, position;
+	transition-duration: .4s;
+	transition-timing-function: ease-in-out;
+}
+
+.friendlobby__row
+{
+	width: 100%;
+	height: fit-children;
+	margin: 8px 0px 8px 24px;
+}
+
+.friendlobby.playerforhire .friendlobby__row__settings,
+.friendlobby.playerforhire .friendlobby__row__group
+{
+	visibility: collapse;
+}
+
+.friendlobby.playerforhire
+{
+	flow-children: none;
+}
+
+.friendlobby.playerforhire .friendlobby__row-avatars
+{
+	margin-top: 4px;
+	horizontal-align: left;
+	vertical-align: top;
+}
+
+.friendlobby.playerforhire .friendlobby__row
+{
+	margin-left: 82px;
+	margin-top: 18px;
+}
+
+.friendlobby__row--bottom-margin
+{
+	margin: 0px 0px 8px 24px;
+}
+
+.friendlobby__row--no-margin
+{
+	margin: 0px 0px 0px 24px;
+}
+
+.friendlobby__row-name
+{
+	vertical-align: center;
+	padding: 0px 4px 0px 0px;
+	flow-children: right;
+	height: fit-children;
+	width: 100%;
+}
+
+.friendlobby__row-left
+{
+	flow-children: left;
+	height: fit-children;
+	width: 100%;
+}
+
+.friendlobby__row__icon-prime
+{
+	horizontal-align: left;
+	vertical-align: center;
+	padding: 0px 8px 0px 0px;
+	opacity: .5;
+}
+
+.friendlobby__row__icon-flag
+{
+	vertical-align: center;
+	padding: 0px 8px 0px 0px;
+	height: 20px;
+}
+
+.friendlobby__row__icon-skillgroup
+{
+	vertical-align: center;
+	padding: 0px 8px 0px 0px;
+	visibility: visible;
+}
+
+.friendlobby__row__icon-skillgroup.hidden,
+.friendlobby__row__icon-flag.hidden
+{
+	width: 0px;
+	height: 0px;
+	visibility: collapse;
+}
+
+#FriendLobbyCloseButton
+{
+	margin: 0px;
+	height: 20px;
+	width: 20px;
+}
+
+#FriendLobbyCloseButton Image
+{
+	margin: 0px;
+}
+
+.IconButton.hidden
+{
+	width: 0px;
+	height: 0px;
+	visibility: collapse;
+}
+
+.friendlobby__row-avatars
+{
+	flow-children: right;
+	width: fit-children;
+	height: fit-children;
+	margin: 0px 0px 8px 24px;
+	vertical-align: center;
+}
+
+.friendlobby__slot
+{
+	horizontal-align: middle;
+	vertical-align: center;
+	width: fit-children;
+	height: fit-children;
+	margin: 0px 14px;
+}
+
+.friendlobby__slot--first
+{
+	margin-left: 24px;
+}
+
+.friendlobby__text
+{
+	width: 300px;
+	max-height: 18px;
+	font-size: 14px;
+	text-overflow: ellipsis;
+	font-weight: normal;
+	color: white;
+}
+
+#JsFriendLobbyLeaderName
+{
+	width: 100%;
+	max-height: 20px;
+}
+
+.friendlobby-avatar__Image
+{
+	width: 48px;
+	height: 48px;
+	vertical-align: center;
+	box-shadow: shadowOffset;
+	transform:Scale3d(1, 1, 1);
+	border: 0px solid white;
+
+	transition-property: border, transform, box-shadow;
+	transition-duration: .25s;
+	transition-timing-function: ease-in-out;
+}
+
+.friendtile-advertise .friendlobby-avatar__Image
+{
+	width: 48px;
+	height: 48px;
+}
+
+.friendlobby-avatar__Image--Slots
+{
+	width: 42px;
+	height: 42px;
+}
+
+.friendlobby-avatar__Image:hover
+{
+	                                      
+	border: 4px solid white;
+	box-shadow: fill #000000 0px 0px 8px 4px;
+
+	transition-property: border, transform, box-shadow;
+	transition-duration: .25s;
+	transition-timing-function: ease-in-out;
+}
+
+.friendlobby__slot .IconButton
+{
+	margin: 0px;
+	wash-color: baseText;
+}

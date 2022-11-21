@@ -1,0 +1,27 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/csgostyles.css" />
+		<include src="file://{resources}/styles/hud/hudprogressbar.css" />
+		<include src="file://{resources}/styles/base.css" />
+	</styles>
+	
+	<CSGOHudProgressBar hittest="false" class="hud-progress-bar">
+		<Panel class="icon">
+			<Image src="file://{images}/icons/ui/defuse.png" class="defuse_icon"/>
+			<Image src="file://{images}/icons/ui/alert.png" class="alert_icon"/>
+		</Panel>
+		
+		<Panel class="hud-progress-bar-layout">
+			<Panel class="text_layout">
+				<Label text="#SFUIHUD_InfoPanel_DefuseTitle" class="defuse-label" />
+				<Label text="{t:d:duration}" class="time-label" />
+			</Panel>
+			
+			<Panel class="hud-bar-bg">
+				<Panel class="hud-bar progress-bar-animating" progress-animation="defuse-anim" />
+			</Panel>
+			
+			<Label id="ActionLabel" class="info-label"/>
+		</Panel>
+	</CSGOHudProgressBar>
+</root>

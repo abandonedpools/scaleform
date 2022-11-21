@@ -1,0 +1,170 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/csgostyles.css"/>
+		<include src="file://{resources}/styles/mainmenu.css"/>
+		<include src="file://{resources}/styles/mainmenu_inventory.css"/>
+	</styles>
+	<scripts>
+		<include src="file://{resources}/scripts/common/formattext.js" />
+		<include src="file://{resources}/scripts/common/menuanims.js" />
+		                                                                                  
+		<include src="file://{resources}/scripts/common/iteminfo.js" />
+		<include src="file://{resources}/scripts/popups/popup_acknowledge_item.js" />
+		<include src="file://{resources}/scripts/mainmenu_inventory.js" />
+	</scripts>
+
+	<snippets>
+		<snippet name="InvSortDropdownSnippet">
+			<Panel class="horizontal-align-right left-right-padding">
+				<DropDown class="PopupButton White" id="InvSortDropdown" menuclass="DropDownMenu Width-250" oninputsubmit="">
+
+				</DropDown>
+			</Panel>
+		</snippet>
+
+		<snippet name="InvSearchSnippet">
+			<Panel class="inv-category">
+
+				<Panel id="InvSearchNavBar" class="horizontal-center full-width" hittest="true">
+					<Panel  id="InvSearchTextEntryContainer" class="inv-search-navbar">
+						<TextEntry id="InvSearchTextEntry"
+								class="inv-search-textentry"
+								placeholder="#inv_search_default"
+								onfocus="" />
+
+					</Panel>
+				</Panel>
+
+				<Panel class="full-width full-height">
+					<InventoryItemList id="InvSearchPanel-List" />
+
+					<Panel id="InvSearchSuggestions" class="inv-search__suggestions">
+						<Label html="true" text="#inv_search_popular" class="bottom-padding-medium fontWeight-Light"/>
+						<Panel id="InvSearchSuggestionsList" class="top-bottom-flow"/>
+					</Panel>
+				</Panel>
+			</Panel>
+		</snippet>
+
+		<snippet name="SuggestedEntry">
+			<Button class="inv-search__suggestions_entry">
+				<Label id="SuggestedLabel" html="true" text="" />
+			</Button>
+		</snippet>
+
+		<snippet name="InvEmptyLister">
+			<Panel class="full-width full-height mainmenu-content__background-color">
+				<Panel class="left-right-flow horizontal-center vertical-center">
+					<Image class="left-right-padding" src="file://{images}/icons/ui/info.svg" texturewidth="32" textureheight="32"/>
+					<Label id="JsInvEmptyListerLabel" class="inv-category__empty-list-text" text=""/>
+				</Panel>
+			</Panel>
+		</snippet>
+
+		<snippet name="TopRightExtraButtonsSnippet">
+			<Panel class='content-navbar__tabs'>
+				<Panel class="inv-nav__seperator" />
+				<Panel id="InvXrayBtnContainer" class="vertical-center full-height hide">
+					<Button id="InvXrayBtn" class="inv-nav-solid-btn">
+						<Label text="#popup_xray_title" />
+					</Button>
+					<Panel id="" class="navbar-btn__notification inv-nav-solid-btn-notification">
+						<Label id="" class="navbar-btn__notification-text" text="1"/>
+					</Panel>
+				</Panel>
+				<Button id="InvLoadoutBtn" class="">
+					<Label text="#inv_nav_loadout" />
+				</Button>
+				<Button id="InvCraftingBtn" class="">
+					<Label text="#inv_nav_tradeup" />
+				</Button>
+				<Panel class="game-mode-selection-radios-spacer"></Panel>
+				<Button class="content-navbar__tabs--small-image" id="InvSearchBtn"
+						data-type='any'>
+					<Image src="file://{images}/icons/ui/find.svg" textureheight="48" texturewidth="-1" />
+					<Label text="#inv_nav_search" />
+				</Button>
+			</Panel>
+		</snippet>
+
+		<snippet name="MarketLinkSnippet">
+			<Panel class="horizontal-align-right vertical-center left-right-padding">
+				<Button id="InvMarketLink" class="IconButton left-right-flow" >
+					<Image src="file://{images}/icons/ui/link.svg"/>
+					<Label text="#store_tab_market"/>
+				</Button>
+			</Panel>
+		</snippet>
+
+		<snippet name="CapabilityActionBar">
+			<Panel>
+				<Panel id="CapabilityPopupMultiStatus" class="right-left-flow horizontal-align-right vertical-center">
+					<Button id="CapabilityPopupMultiStatusBtn" class="PopupButton Positive"
+						onactivate="InventoryPanel.ProceedForMultiStatusCapabilityPopup();" >
+						<Label text="#SFUI_Crafting_Exchange"/>
+					</Button>
+					<Label class="inv-popup-title__text inv-popup-rightextra-label" text="#CSGO_Recipe_Count_Items_Selected" id="CapMultiStatusCounterLabel" html="true"/>
+				</Panel>
+			</Panel>
+		</snippet>
+	</snippets>
+
+	<Panel class="mainmenu-content__container" useglobalcontext="true">
+			<Panel class="content-navbar">
+				<Label id="" class="content-navbar__title" text="#SFUI_MainMenu_Inventory"/>
+			</Panel>
+		<Panel id="InventoryMainContainer" class="full-width full-height" hittest="false">
+
+			<Panel id="InventoryMain" class="mainmenu-content__container mainmenu-content__container--inventory">
+				                                                                                                               
+				                                                                                             
+			</Panel>
+
+			                                                      
+			<Panel id="InvLoadoutPanel" class="mainmenu-content--popuptab mainmenu-content__container mainmenu-content--hidden">
+				<Panel class="content-navbar inv-popup">
+
+					<Panel class="content-navbar__extra-buttons">
+						<Button class="IconButton" >
+							<Image src = "file://{images}/icons/ui/back.svg"
+									onactivate="InventoryPanel.CloseLoadout();"/>
+						</Button>
+					</Panel>
+
+					<Panel class="inv-popup-title">
+						<Label class="mainmenu-content--popuptab__title" text="#inv_nav_loadout"/>
+					</Panel>
+		
+				</Panel>
+				<CSGOLoadout id="Loadout" registerforreadyevents="true" readyfordisplay="false"/>
+			</Panel>
+
+			<Frame id="InvCraftingPanel" src="file://{resources}/layout/crafting.xml" />
+
+			<Frame id="InvSearchPanel" src="file://{resources}/layout/mainmenu_inv_search.xml" />
+
+			                                                                                     
+			<Panel id="SelectItemForCapabilityPopup" class="mainmenu-content--popuptab mainmenu-content__container mainmenu-content--hidden">
+				<Panel id="CapabilityPopupTitleBar" class="content-navbar inv-popup">
+
+					<Panel class="content-navbar__extra-buttons">
+						<Button class="IconButton" >
+							<Image src = "file://{images}/icons/ui/back.svg"
+									onactivate="InventoryPanel.CloseSelectItemForCapabilityPopup();"/>
+						</Button>
+					</Panel>
+					
+					<Panel id="CapabilityPopupTitle" class="inv-popup-title">
+						<Label class="mainmenu-content--popuptab__title" text="#inv_select_item_use" id="CapPrefixItemLabel" html="true"/>
+						<ItemImage class="inv-popup-title__image" id="CapItemImage" />
+						<Label class="inv-popup-title__text" id="CapItemName" text=""/>
+					</Panel>
+
+
+				</Panel>
+
+			</Panel>
+
+		</Panel>
+	</Panel>
+</root>

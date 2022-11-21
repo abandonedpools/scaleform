@@ -1,0 +1,250 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/csgostyles.css" />
+		<include src="file://{resources}/styles/friendslist.css" />
+		<include src="file://{resources}/styles/playercard.css" />
+		<include src="file://{resources}/styles/friendtile.css" />
+	</styles>
+	<scripts>
+		<include src="file://{resources}/scripts/common/commonutil.js" />
+		<include src="file://{resources}/scripts/common/sessionutil.js" />
+		<include src="file://{resources}/scripts/friendtile.js" />
+		<include src="file://{resources}/scripts/friendlobby.js" />
+		<include src="file://{resources}/scripts/friend_advertise_tile.js" />
+		<include src="file://{resources}/scripts/friendslist.js" />
+		<include src="file://{resources}/scripts/common/teamcolor.js" />
+		<include src="file://{resources}/scripts/avatar.js" />
+		<include src="file://{resources}/scripts/party.js" />
+	</scripts>
+
+	<snippets>
+		<snippet name="NoData">
+			<Panel class="friendslist-nodata">
+				<Image class="friendslist-nodata__image" src="file://{images}/icons/ui/info.svg" texturewidth="32" textureheight="32"/>
+				<Panel class="friendslist-nodata-text" >
+					<Label id="JsFriendsNoDataTitle" class="friendslist-nodata-text__title" text="#FriendsList_nodata_friends_title"/>
+					<Label id="JsFriendsNoDataDesc" class="friendslist-nodata-text__body" text="#FriendsList_nodata_friends"/>
+					<Button id="JsFriendsNoDataBtn" class="PopupButton White" >
+						<Image src="file://{images}/icons/ui/link.svg" texturewidth="28" textureheight="28" />
+						<Label text="#FriendsList_groups_btn"/>
+					</Button>
+				</Panel>	
+			</Panel>
+		</snippet>
+
+		<snippet name="PartyMember">
+			<Panel class="friendtile friendtile--party" acceptsfocus="true" mousetracking="true">
+				<Button id="PartyMemberBtn" class="friendtile-contents">
+					                       
+					<Panel class="friendtile__status" >
+						<Label id="JsFriendName" class="friendtile__text__title" text=""/>
+						<Panel class="left-right-flow top-padding" >
+							<Image id="PartyRank" class="right-padding" textureheight="24" texturewidth="-1" src="file://{images}/icons/skillgroups/skillgroup10.svg"/>
+							<Image id="PartyPrime" class="" textureheight="20" texturewidth="-1" src="file://{images}/icons/ui/prime.svg"/>
+						</Panel>
+					</Panel>
+				</Button>
+			</Panel>
+		</snippet>
+	</snippets>
+
+	<Panel class="friendslist" acceptsfocus="true" mousetracking="true" useglobalcontext="true" >
+		<Panel id="PartyList" class="party-list hidden">
+			<Panel id="MatchStatusBackground" class="party-list__bg"/>
+			<Panel class="top-bottom-flow full-width">
+				                                                
+				<Frame id="MatchStatusContainer" class="matchmaking-status-container" src="file://{resources}/layout//matchmaking_status.xml"/>
+				<Panel class="friendslist__seperator"/>
+
+				                                   
+				<Panel id="PartyListHeader" class="left-right-flow full-width" >
+					<Panel id="PartyTitleAlert" class="party-player-count">
+						<Label id="PartyTitleAlertText" class="party-status-members-count" text=""/>
+					</Panel>
+
+					<Panel class="left-right-padding left-right-flow">
+						<Button id="MatchStatusInfo" 
+								class="IconButton horizontal-align-right" 
+								style="tooltip-position: left;"
+								onactivate="$.DispatchEvent( 'OpenPlayMenu' );">
+							<Image src="file://{images}/icons/ui/info.svg"/>
+						</Button>
+
+						<Button id="PartyCancelBtn"
+								class="IconButton horizontal-align-right" 
+								style="tooltip-position: bottom;"
+								onmouseover="UiToolkitAPI.ShowTextTooltip( 'PartyCancelBtn', '#tooltip_canelsearch' );"
+								onmouseout="UiToolkitAPI.HideTextTooltip();"
+								onactivate="LobbyAPI.StopMatchmaking(); $.DispatchEvent( 'PlaySoundEffect', 'UIPanorama.generic_button_press', 'MOUSE' );">
+							<Image src="file://{images}/icons/ui/cancel.svg"/>
+						</Button>
+
+						<Button id="PartyLeaveBtn" 
+								class="IconButton horizontal-align-right" 
+								style="tooltip-position: bottom;"
+								onmouseover="UiToolkitAPI.ShowTextTooltip( 'PartyLeaveBtn', '#tooltip_leave_lobby' );"
+								onmouseout="UiToolkitAPI.HideTextTooltip();">
+							<Image src="file://{images}/icons/ui/leave.svg"/>
+						</Button>
+					</Panel>
+				</Panel>
+				<Panel class="friendslist__seperator bottom-margin"/>
+				<Panel id="PartyMembers" class="full-width top-bottom-flow">
+							                               
+				</Panel>
+			</Panel>
+		
+		</Panel>
+
+		                                                                                 
+		<Panel id="AntiAddiction" class="anti-addiction full-width left-right-flow hidden"
+				style="tooltip-position: bottom;"
+				onmouseout="UiToolkitAPI.HideTextTooltip();">
+				                                                                                                                   
+			<Panel id="AntiAddictionIcon" class="anti-addiction__icon"/>
+			<Label id="AntiAddictionText"
+				class="anti-addiction__text"
+				text="#AntiAddiction_Label_TimeRemaining" />
+		</Panel>
+
+		<Panel id="JsIncomingInvites" class="friendslist-incominginvites hidden">
+			<Panel id="JsIncomingInviteContainer" class="friendslist-incominginvites-container">
+				                                         
+			</Panel>
+		</Panel>
+
+		<Panel id="JsFriendsNavBar" class="friendslist-navbar">
+			<Panel id="JsFriendsTab-friends" class="friendslist-navbar-btn" style="tooltip-position: bottom;">
+				<RadioButton id="JsFriendsTab" 
+							group="FriendsNavBar" 
+							selected="true" 
+							onactivate="friendsList.ShowSelectedTab( 0 );"
+							onmouseover="UiToolkitAPI.ShowTextTooltip( 'JsFriendsTab-friends', '#FriendsList_nodata_friends_title' );"
+							onmouseout="UiToolkitAPI.HideTextTooltip();">
+					<Image src="file://{images}/icons/ui/player.svg"/>
+				</RadioButton>
+				<Panel id="JsFriendsTabAlert" class="navbar-btn__notification text-only">
+					<Label id="JsFriendsTabAlertText" class="navbar-btn__notification-text shadow" text=""/>
+				</Panel>
+			</Panel>
+			<Panel id="JsFriendsTab-lobbies" class="friendslist-navbar-btn" style="tooltip-position: bottom;">
+				<RadioButton id="JsFriendsTab" 
+							group="FriendsNavBar"
+							onactivate="friendsList.ShowSelectedTab( 3 );"
+							onmouseover="UiToolkitAPI.ShowTextTooltip( 'JsFriendsTab-lobbies', '#FriendsList_nodata_advertising_title' );"
+							onmouseout="UiToolkitAPI.HideTextTooltip();">
+					<Image src="file://{images}/icons/ui/broadcast.svg"/>
+				</RadioButton>
+				<Panel id="JsFriendsTabAlert" class="navbar-btn__notification">
+					<Label id="JsFriendsTabAlertText" class="navbar-btn__notification-text" text=""/>
+				</Panel>
+			</Panel>
+			<Panel id="JsFriendsTab-recents" class="friendslist-navbar-btn" style="tooltip-position: bottom;">
+				<RadioButton id="JsFriendsTab" 
+							group="FriendsNavBar" 
+							onactivate="friendsList.ShowSelectedTab( 2 );"
+							onmouseover="UiToolkitAPI.ShowTextTooltip( 'JsFriendsTab-recents', '#FriendsList_nodata_recents_title' );"
+							onmouseout="UiToolkitAPI.HideTextTooltip();">
+					<Image src="file://{images}/icons/ui/recent.svg"/>
+				</RadioButton>
+				<Panel id="JsFriendsTabAlert" class="navbar-btn__notification">
+					<Label id="JsFriendsTabAlertText" class="navbar-btn__notification-text" text=""/>
+				</Panel>
+			</Panel>
+			<Panel id="JsFriendsTab-requests" class="friendslist-navbar-btn" style="tooltip-position: bottom;">
+				<RadioButton id="JsFriendsTab" 
+							group="FriendsNavBar"
+							onactivate="friendsList.ShowSelectedTab( 1 );"
+							onmouseover="UiToolkitAPI.ShowTextTooltip( 'JsFriendsTab-requests', '#FriendsList_nodata_requests_title' );"
+							onmouseout="UiToolkitAPI.HideTextTooltip();">
+					<Image src="file://{images}/icons/ui/invite.svg"/>
+				</RadioButton>
+				<Panel id="JsFriendsTabAlert" class="navbar-btn__notification">
+					<Label id="JsFriendsTabAlertText" class="navbar-btn__notification-text" text=""/>
+				</Panel>
+			</Panel>
+		</Panel>
+		<Panel class="friendslist__seperator"/>
+		
+		<Panel class="friendslist-lists">
+			<Panel id="JsFriendsList-friends" class="friendslist-list hidden">
+				<Panel id="JsFriendsList-List" class="friendslist-list__contents">
+					                               
+				</Panel>
+			</Panel>
+
+			<Panel id="JsFriendsList-requests" class="friendslist-list hidden">
+				<Panel id="JsFriendsListSettings" class="friendslist-navbar friendslist-navbar--tab-settings expand">
+					<Panel class= "horizontal-align-left vertical-center" >
+						<Button id="JsFriendsList-requests-toolbar-button-add"
+							class="IconButton" onactivate="friendsList.OnAddFriend();"
+							onmouseover="UiToolkitAPI.ShowTextTooltip( 'JsFriendsList-requests-toolbar-button-add', '#AddFriend_tooltip' );"
+							onmouseout="UiToolkitAPI.HideTextTooltip();">
+							<Image src="file://{images}/icons/ui/addplayer.svg"/>
+						</Button>
+					</Panel>
+				</Panel>
+				<Panel id="JsFriendsList-List" class="friendslist-list__contents">
+					                               
+				</Panel>
+			</Panel>
+
+			<Panel id="JsFriendsList-recents" class="friendslist-list hidden">
+				<Panel id="JsFriendsListRecentsLoadingBar" class="friendslist-loadingbar hidden">
+					<Panel id="JsFriendsListRecentsLoadingBarInner" class="friendslist-loadingbar__inner"/>
+				</Panel>
+				<Panel id="JsFriendsList-List" class="friendslist-list__contents">
+					                               
+				</Panel>
+			</Panel>
+
+			<Panel id="JsFriendsList-lobbies" class="friendslist-list hidden">
+				<Panel id="JsFriendsListSettings" class="friendslist-navbar friendslist-navbar--tab-settings expand">
+					<Panel class= "horizontal-align-left vertical-center left-right-flow" >
+							<RadioButton id="JsFriendsList-lobbies-toolbar-button-competitive"
+								group="JsFriendsList-lobbies-toolbar-button-modegroup"
+								class="IconButton friendslist-navbar-lobby-button" onactivate="friendsList.SetLobbiesTabListFilters( 'competitive' );"
+								onmouseover="UiToolkitAPI.ShowTextTooltip( 'JsFriendsList-lobbies-toolbar-button-competitive', '#SFUI_GameMode_competitive' );"
+								onmouseout="UiToolkitAPI.HideTextTooltip();">
+								<Image src="file://{images}/icons/ui/competitive.svg"/>
+							</RadioButton>
+							<RadioButton id="JsFriendsList-lobbies-toolbar-button-scrimcomp2v2"
+								group="JsFriendsList-lobbies-toolbar-button-modegroup"
+								class="IconButton friendslist-navbar-lobby-button" onactivate="friendsList.SetLobbiesTabListFilters( 'scrimcomp2v2' );"
+								onmouseover="UiToolkitAPI.ShowTextTooltip( 'JsFriendsList-lobbies-toolbar-button-scrimcomp2v2', '#SFUI_GameMode_scrimcomp2v2' );"
+								onmouseout="UiToolkitAPI.HideTextTooltip();">
+								<Image src="file://{images}/icons/ui/scrimcomp2v2.svg"/>
+							</RadioButton>
+							<RadioButton id="JsFriendsList-lobbies-toolbar-button-survival"
+								group="JsFriendsList-lobbies-toolbar-button-modegroup"
+								class="IconButton friendslist-navbar-lobby-button" onactivate="friendsList.SetLobbiesTabListFilters( 'survival' );"
+								onmouseover="UiToolkitAPI.ShowTextTooltip( 'JsFriendsList-lobbies-toolbar-button-survival', '#SFUI_GameMode_survival' );"
+								onmouseout="UiToolkitAPI.HideTextTooltip();">
+								<Image src="file://{images}/icons/ui/survival.svg"/>
+							</RadioButton>
+							<RadioButton id="JsFriendsList-lobbies-toolbar-button-cooperative"
+								group="JsFriendsList-lobbies-toolbar-button-modegroup"
+								class="IconButton friendslist-navbar-lobby-button" onactivate="friendsList.SetLobbiesTabListFilters( 'cooperative' );"
+								onmouseover="UiToolkitAPI.ShowTextTooltip( 'JsFriendsList-lobbies-toolbar-button-cooperative', '#SFUI_GameMode_cooperative' );"
+								onmouseout="UiToolkitAPI.HideTextTooltip();">
+								<Image src="file://{images}/icons/ui/cooperative.svg"/>
+							</RadioButton>
+							<Panel class="friendslist-navbar-spacer-fit-width"/>
+							<Button id="JsFriendsList-lobbies-toolbar-button-refresh"
+								class="IconButton" onactivate="friendsList.RefreshLobbyListings();"
+								onmouseover="UiToolkitAPI.ShowTextTooltip( 'JsFriendsList-lobbies-toolbar-button-refresh', '#GameUI_Refresh' );"
+								onmouseout="UiToolkitAPI.HideTextTooltip();">
+								<Image src="file://{images}/icons/ui/refresh.svg"/>
+							</Button>
+					</Panel>
+				</Panel>
+				<Panel id="JsFriendsListLobbyLoadingBar" class="friendslist-loadingbar hidden">
+					<Panel id="JsFriendsListLobbyLoadingBarInner" class="friendslist-loadingbar__inner"/>
+				</Panel>
+				<Panel id="JsFriendsList-List" class="friendslist-list__contents">
+							                               
+				</Panel>
+			</Panel>
+		</Panel>
+	</Panel>
+</root>

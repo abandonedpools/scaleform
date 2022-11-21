@@ -1,0 +1,482 @@
+
+#loadingscreen__blur-target.teamselect-bg {
+	width:100%;
+	height:100%;
+
+	background-color: gradient( radial, 50% 100%, 0% 0%, 70% 30%, from( #ffffff10 ), to( #00000000 ) );
+  	                                                                                                 	
+  	                                 
+	z-index: -11;
+
+	transition-property: opacity, brightness;
+	transition-duration: 0.1s;
+}
+
+          
+                
+	                          
+	              
+ 
+  
+
+  
+                                          
+	                      
+ 
+  
+
+.mainmenu-content  
+{
+  	                      
+	background-color: gradient( linear, 0% 80%, 0% 0%, from( #000000 ), to( #00000033 )); 
+}
+
+.team-select
+{
+	width: 100%;
+	height: 100%;
+  	                                                                                                                       
+	visibility: collapse;
+}
+
+.team-select-list-container
+{
+	width: 100%;
+	height: fit-children;
+  	                     
+	vertical-align: middle;
+	horizontal-align: center;
+
+	transition-property: position;
+	transition-duration: .25s;
+	transition-timing-function: ease-in-out;
+}
+
+.WindowRoot_TripleMonitor .team-select-list-container
+{
+	horizontal-align: center;
+	width: 33%;
+}
+
+.team-select-list
+{
+	width: 512px;
+	height: fit-children;
+  	                         
+	flow-children: down;
+}
+
+.teamselect-blur
+{
+	height: 100%;
+	width: 100%;
+	brightness: 0.7;
+	blur: fastgaussian( 6, 6, 3 );
+}
+
+.team-select-icon-title
+{
+	flow-children: down;
+	width: fit-children;
+	horizontal-align: center;
+	vertical-align: middle;
+
+	height: 850px;
+
+	transition-property: brightness;
+	transition-duration: .25s;
+	transition-timing-function: ease-in-out;
+}
+
+.team-select-list__title
+{
+	vertical-align: top;
+	font-weight: bold;
+	horizontal-align: center;
+	text-transform: uppercase;
+
+	transition-property: color;
+	transition-duration: .25s;
+	transition-timing-function: ease-in-out;
+}
+
+.team-select-list__title--ct
+{
+	color:color-CT;
+	font-family: Stratum2, 'Noto Sans';
+	font-size: 32px;
+}
+
+.team-select-list__title--t
+{
+	color: color-T;
+	font-family: Stratum2, 'Noto Sans';
+	font-size: 32px;
+}
+
+.team-select-list__subtitle
+{
+	vertical-align: top;
+	font-weight: lighter;
+	text-transform: none;
+	font-weight: normal;
+	horizontal-align: center;
+	text-align: center;
+
+	transition-property: color;
+	transition-duration: .25s;
+	transition-timing-function: ease-in-out;
+}
+
+.team-select-icon-title.team-select-icon-title-highlight .team-select-list__title,
+.team-select-icon-title.team-select-icon-title-highlight .team-select-list__subtitle
+{
+	color: white;	
+	transition-property: color;
+	transition-duration: .25s;
+	transition-timing-function: ease-in-out;
+}
+
+
+.team-select-icon-title-t
+{
+	position: -240px 0px 0px;
+}
+
+.team-select-icon-title-ct
+{
+	position: 240px 0px 0px;
+}
+
+
+.team-select-icon-title__labels
+{
+	flow-children: down;
+	                      
+	width: 100%;
+	margin: 0px 16px 64px 16px;
+	vertical-align: middle;
+	horizontal-align: center;
+}
+
+.team-select-icon
+{
+	width: 390px;
+	height: 390px;
+	horizontal-align: center;
+	vertical-align: top;
+	position: -440px 0px 0px;
+  	               
+	opacity: .3;
+	ui-scale: 95%;
+
+	transition-property: opacity, ui-scale;
+	transition-duration: .25s;
+	transition-timing-function: ease-in-out;
+
+	sound-trans: "UIPanorama.team_select_rolloff";
+}
+
+.team-select-icon--t
+{
+	wash-color: color-T;
+}
+
+.team-select-icon--ct
+{
+	wash-color: color-CT;
+}
+
+  
+                           
+	                                    
+	                         
+	                 
+	                  	
+	                                 
+	            
+
+  	                         
+	             
+	             
+	                         
+	                   
+	                      
+ 
+  
+
+.team-select-icon:hover
+{
+	sound-trans: "UIPanorama.team_select_rollover";
+
+	transition-property: opacity;
+	transition-duration: .25s;
+	transition-timing-function: ease-in-out;
+}
+
+.team-select-icon-title.team-select-icon-title-highlight .team-select-icon
+{
+  	              
+	opacity: 1;
+  	               
+
+	transition-property: opacity, ui-scale;
+	transition-duration: .25s;
+	transition-timing-function: ease-in-out;
+}
+
+
+
+               
+
+.team-select-list__teammates
+{
+	flow-children: down;
+	width: 512px;
+	height: fit-children;
+	overflow: clip;
+}
+
+.team-select-teammate
+{
+	visibility: visible;
+	transform: scaleY( 1 );
+	background-color: none;
+	
+	transition-property: opacity, transform;
+	transition-duration: .25s;
+	transition-timing-function: ease-in-out;
+}
+
+.team-select-list--t .team-select-teammate {
+	background-color: none;
+	flow-children: left;
+	horizontal-align: left;
+  	                  
+	padding-left: 16px;
+	transform-origin: 0% 50%;
+
+}
+
+.team-select-list--t .team-select-teammate:hover{
+
+	background-color: gradient( linear, 0% 0%, 100% 0%, from( white ), color-stop( 0.025, white ), color-stop( 0.025, #ffffff40 ), color-stop( 0.035, #00000080 ), to( #00000000 ) );
+	sound: "UIPanorama.sidemenu_rollover";
+	
+	brightness: 1.5;
+  	                                         
+}
+
+.team-select-list--ct .team-select-teammate {
+	background-color: none;
+	flow-children: right;
+	horizontal-align: right;
+	padding-right: 16px;
+	transform-origin: 0% 50%;
+}
+
+.team-select-list--ct .team-select-teammate:hover{
+
+	background-color: gradient( linear, 100% 0%, 0% 0%, from( white ), color-stop( 0.025, white ), color-stop( 0.025, #ffffff40 ), color-stop( 0.03, #00000080 ), to( #00000000 ) );
+	sound: "UIPanorama.sidemenu_rollover";
+	
+	brightness: 1.5;
+  	                                         
+}
+
+.team-select-teammate.hidden
+{
+	opacity:0;
+	transform: scaleY( 0 );
+	
+	transition-property: opacity, transform, position;
+	transition-duration: .25s;
+	transition-timing-function: ease-in-out;
+}
+
+.team-select-teammate__name
+{
+	vertical-align: center;
+	margin-left: 8px;
+  	                    
+	height: 24px;
+	text-overflow: ellipsis;
+	font-size: 17px;
+	font-weight: bold;
+	font-family: stratum2Font;
+	letter-spacing: .35px;
+	text-shadow: 1px 1px 2px #000000;
+
+}
+
+.team-select-vertical-separator
+{
+	height:100%;
+	width: 1px;
+	margin: 0px 16px;
+	horizontal-align: center;
+	background-color: gradient( linear, 0% 0%, 0% 80%, from( rgba(255, 255, 255, 0.158) ), to( rgba(255, 255, 255, 0 )));
+}
+
+.team-select__timer
+{
+	horizontal-align: center;
+	vertical-align: top;
+  	                   
+	margin-top: 48px;
+	height: fit-children;
+	flow-children: right;
+}
+
+.team-select__timer Image
+{
+	width: 20px;
+	height: 20px;
+	margin-right: 8px;
+	vertical-align: middle;
+	wash-color: White;
+}
+
+.team-select__timer Label
+{
+	font-size: 22px;
+	font-weight: bold;
+	horizontal-align: left;
+	vertical-align: center;
+	color: White;
+}
+
+.team-select-error
+{
+	flow-children: right;
+	padding:16px;
+	border-radius: 2px;
+	vertical-align: center;
+	horizontal-align: center;
+  	                    
+	wash-color: warningColor;
+	background-color: rgba(0, 0, 0, 0.50);
+	opacity: 1;
+
+	transition-property: opacity;
+	transition-duration: .25s;
+	transition-timing-function: ease-in-out;
+}
+
+.team-select-error.hidden
+{
+	opacity: 0;
+	
+	transition-property: opacity;
+	transition-duration: .25s;
+	transition-timing-function: ease-in-out;
+}
+
+.team-select-error__label
+{
+	margin-left: 8px;
+	color:white;
+}
+
+Countdown.CountdownAfterEnd
+{
+	visibility: collapse;
+}
+
+.join-spec-button
+{
+	vertical-align: bottom;
+	horizontal-align: center;
+	border-radius: 4px;
+	margin-bottom: 32px;
+	font-weight: bold;
+}
+
+.team-select-actionbar
+{
+	height: 96px;
+	width: 100%;
+	vertical-align: bottom;
+	horizontal-align: center;
+	flow-children: down;
+}
+
+.team-select-actionbar > .mainmenu-navbar
+{
+	flow-children: left;
+}
+
+.WindowRoot_TripleMonitor #TeamSelectButtons
+{
+	horizontal-align: center;
+	width: 33%;
+}
+
+.WindowRoot_TripleMonitor #AutojoinTimer
+{
+	width: 33%;
+}
+
+.loading-screen-model
+{
+	width: 700px;
+	height: 100%;
+	horizontal-align: center;
+	vertical-align: middle;
+	opacity: 1;
+	ui-scale: 100%;
+  	                     
+	img-shadow: -2px -2px 8px #000000;
+
+	brightness: 0.5;
+
+	transition-property: position, brightness, ui-scale, opacity;
+	transition-duration: .25s;
+	transition-timing-function: ease-in-out;
+}
+
+.loading-screen-model--right
+{
+	position: 260px -120px 0px;
+}
+
+.loading-screen-model--left
+{
+	position: -220px -120px 0px;
+}
+
+.loading-screen-model--right.highlight,
+.loading-screen-model--left.highlight
+{
+	ui-scale: 104%;
+
+	brightness: 2.0;
+
+	transition-property: ui-scale;
+	transition-duration: .25s;
+	transition-timing-function: ease-in-out;
+}
+
+.highlit-player {
+
+	animation-name: ping;
+	animation-duration: .3s;
+	                             
+	animation-timing-function: ease-in;
+	animation-iteration-count: 1;
+
+	brightness: 1.0;
+}
+
+@keyframes ping
+{
+	0%
+	{
+		brightness: .5;
+	}
+
+	100%
+	{
+		brightness: 1;
+	}
+}

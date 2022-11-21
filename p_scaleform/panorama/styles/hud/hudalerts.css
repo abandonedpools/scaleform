@@ -1,0 +1,172 @@
+                                          
+
+CSGOHudAlerts
+{
+	width: 700px;
+	height: 41px;
+	horizontal-align:center;
+}
+
+.round-end-report-visible CSGOHudAlerts
+{
+	transform: translateY(100px);
+}
+
+#AlertBg
+{
+	width: 100%;
+	height: 100%;
+	background-color: gradient( linear, 0% 0%, 100% 0%, from( #77777700 ), color-stop( 0.20, #00000099 ), color-stop( 0.40, #00000099 ), color-stop( 0.60, #00000099 ), color-stop( 0.80, #00000099 ), to( #00000000 ) );
+}
+
+#AlertText
+{
+	width: 100%;
+	               
+	text-align: center;
+	vertical-align: center;
+	margin-top: 1px;
+	color: #FFFFFF;
+	opacity: 1;
+    font-family: Stratum2 Bold, 'Arial Unicode MS';
+	font-size: 32px;
+	font-weight: bold;
+	letter-spacing: 0px;
+	-s2-mix-blend-mode: screen;
+	text-transform: uppercase;
+}
+
+                                                                                                                                  
+                                                                                               
+                                                                                                       
+.Language_vietnamese #AlertText 
+{
+	font-family: 'Arial', 'Arial Unicode MS';
+}
+
+.MatchStartAlert
+{
+	color: #e10000;
+}
+
+.ReplayAlert
+{
+	color: #c9c9c9;
+}
+
+CSGOHudAlerts.AlertHidden
+{
+	opacity: 0.0;
+}
+
+CSGOHudAlerts.AlertVisible
+{
+	opacity: 1.0;
+	animation-name: AlertVisible;
+	animation-duration: 0.3s;
+	animation-timing-function: linear;
+	animation-iteration-count: 1;
+}
+
+@keyframes 'AlertVisible'
+{
+	0%
+	{
+		opacity: 0.0;
+	}
+	100%
+	{
+		opacity: 1.0;
+	}
+}
+
+CSGOHudAlerts.HideFlash 
+{
+	opacity: 0.0;
+	animation-name: HideFlash;
+	animation-duration: 1.0s;
+	animation-timing-function: linear;
+	animation-iteration-count: 1;
+}
+
+@keyframes 'HideFlash'
+{
+	0%
+	{
+		opacity: 0.65;
+		wash-color: none;
+	}
+	21%
+	{
+		opacity: 1.0;
+		wash-color: #FFFFFFE6;
+	}
+	42%
+	{
+		opacity: 0.65;
+		wash-color: none;
+	}
+	100%
+	{
+		opacity:0.0;
+		wash-color: none;
+	}
+}
+
+CSGOHudAlerts.FlashAnim 
+{
+	opacity: 0.0;
+	animation-name: FlashAnim;
+	animation-duration: 3.7s;
+	animation-timing-function: linear;
+	animation-iteration-count: 1;
+}
+
+@keyframes 'FlashAnim'
+{
+	0%
+	{
+		opacity: 0.0;
+		wash-color: none;
+	}
+	3%
+	{
+		opacity: 0.85;
+		wash-color: #FFFFFF;
+	}
+	6%
+	{
+		opacity: 0.85;
+		wash-color: none;
+	}
+	14%
+	{
+		opacity: 0.8;
+		wash-color: none;
+	}
+	57%
+	{
+		opacity: 0.65;
+		wash-color: none;
+	}
+	86%
+	{
+		opacity: 0.65;
+		wash-color: none;
+	}
+	89%
+	{
+		opacity: 1.0;
+		wash-color: #FFFFFFE6;
+	}
+	92%
+	{
+		opacity: 0.65;
+		wash-color: none;
+	}
+	100%
+	{
+		opacity:0.0;
+		wash-color: none;
+	}
+}

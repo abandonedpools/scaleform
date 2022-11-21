@@ -1,0 +1,110 @@
+   
+	         
+	                                                                          
+  
+
+.hud-hint
+{
+	width: 440px;
+	flow-children: right;
+	opacity: 0;
+	horizontal-align: center;
+	background-color: gradient( linear, 0% 0%, 100% 0%, from( #000000BB ), color-stop( 0.7, #000000BB ), to( #00000000 ) );
+	                    
+	margin-left: 110px;
+	margin-bottom: 0px;
+	margin-top: 75px;
+	overflow: noclip;
+}
+
+.hud-hint--visible
+{
+	animation-name: hud-hint-FadeIn;
+	animation-duration: AlertAnimationSpeed;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+@keyframes 'hud-hint-FadeIn' {
+  0% {
+    opacity: 1.0;
+    position: 0px 80px 0px;
+	background-color: gradient( linear, 0% 0%, 100% 0%, from( #000000BB ), color-stop( 0.2, #00000000 ), to( #00000000 ) );
+  }
+  100% {
+    opacity: 1.0;
+    position: 0px 80px 0px;
+	background-color: gradient( linear, 0% 0%, 100% 0%, from( #000000BB ), color-stop( 0.5, #000000BB ), to( #00000000 ) );
+  }
+}
+
+.hud-hint_icon
+{
+	flow-children: right;
+	horizontal-align: left;
+	height: fit-children;
+}
+
+.hud-hint__icon
+{
+	width: 108px;
+	height: 108px;
+	margin-left: -54px;
+	margin-top: -2px;
+	margin-bottom: -2px;	  
+}
+
+
+
+.hud-hint__text
+{
+	flow-children: down;
+	                                                                                          
+	vertical-align: top;
+	horizontal-align: left;
+	height: fit-children;
+	padding-top: 9px;
+	padding-bottom: 8px;
+	margin-left: 7px;
+}
+
+.hud-hint__priority-label
+{
+	font-family: Stratum2;
+	horizontal-align: left;
+	                    
+	color: #ff5454;
+	font-size: 24px;
+	font-weight: medium;
+	visibility: visible;
+	letter-spacing: 0px;
+	-s2-mix-blend-mode: screen;
+	padding-bottom: 1px;
+}
+
+.hud-hint__label
+{
+	font-family: Stratum2;
+	horizontal-align: center;
+	height: fit-children;
+	color: #ffffff;
+	opacity: 0.9;
+	
+	                    
+	font-size: 22px;
+	font-weight: medium;
+	letter-spacing: 0px;
+	line-height: 23px;
+	-s2-mix-blend-mode: screen;
+	                          
+}
+
+                                                                                                                                  
+                                                                                               
+                                                                                                       
+.Language_vietnamese .hud-hint__text Label
+{
+	font-family: 'Arial', 'Arial Unicode MS';
+}
+

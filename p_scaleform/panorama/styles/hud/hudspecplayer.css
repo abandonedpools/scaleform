@@ -1,0 +1,589 @@
+   
+	            
+	                                              
+  
+@define HudSpecplayer_PanelWidth : 522px;
+
+.hud-spectator-bkg-BOT
+{
+	width: 100%;
+	height: 3px;
+    vertical-align: bottom;
+    background-color: gradient( linear, 0% 20%, 0% 100%, from( #00000000 ), to( #000000BB ) );
+}
+
+.HudSpecplayerRoot
+{
+    flow-children: none;
+	                      
+	                
+	               
+	height: 100%;
+	width: 100%;
+	horizontal-align: center;
+    vertical-align: center;
+	visibility: collapse;
+	
+	margin-bottom: 31px;
+	margin-left: 5px;
+}
+
+.HudSpecplayerParentContainer
+{
+	height: 260px;
+	width: 642px;
+	horizontal-align: center;
+    vertical-align: bottom;
+
+	flow-children: up;
+}
+
+.HudSpecplayerRoot--visible
+{
+	visibility: HUDSpecPlayer;
+
+	transition-property: transform, opacity; 
+	transition-timing-function: ease-in-out;
+	transition-duration: 0.2s;
+
+ 	transform: translate3d( 0px, 0px, 0px );
+}
+
+.HudSpecplayerRoot__player-info
+{
+	width: HudSpecplayer_PanelWidth;
+	               
+	                       
+}
+
+.HudSpecplayerRoot__avatar
+{
+	width: 78px;
+	height: 78px;
+    margin-top: 1px;
+	
+	vertical-align: top;
+	                    
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #666666 ), to( #181818) );
+	padding: 3px;
+}
+
+.HudSpecplayerRoot__playercolor
+{
+    visibility:collapse;
+
+    x: 0px;
+    y: 0px;
+    width: 32px;
+    height: 17px;
+    horizontal-align: center;
+    vertical-align: top;
+	margin-top: -3px;
+	opacity: 0.9;
+    img-shadow: 0px 0px 1px 1.0 #000000CC;
+}
+
+.HudSpecplayerRoot__playercolor--show
+{
+    visibility: visible;
+}
+
+.HudSpecplayerRoot__avatardefault
+{
+    
+}
+
+.HudSpecplayerRoot__avatardisplay
+{
+    height: 54px;
+	width: 54px;
+	horizontal-align: left;
+	margin-left: 34px;
+	margin-bottom: -28px;
+	opacity: 1.0;
+	visibility: visible;
+    img-shadow: 0px 2px 2px 2.0 #313131;
+}
+
+.HudSpecplayer__Stats_DamageTaken
+{
+    width: HudSpecplayer_PanelWidth;
+    height: 22px;
+    horizontal-align: center;
+    background-color: gradient( linear, 50% 0%, 100% 0%, from( #000000EE ), to( #00000000 ) );
+                           
+    font-size: 16px;
+    padding-top: 1px;
+    padding-left: 6px;
+    text-align: left;
+    font-family: Stratum2, 'Arial Unicode MS';
+                          
+    text-shadow: 1px 1px 1px 1.0 black;
+    color: #DDDDDDFF;
+    text-overflow: shrink;
+}
+
+                                                                                                 
+                                                                         
+.Language_vietnamese .HudSpecplayer__player-name,
+.Language_vietnamese .HudSpecplayer__Stats_DamageTaken
+{
+	font-family: ForceStratum2, 'Arial Unicode MS';
+}
+
+.HudSpecplayer__Stats_DamageTaken--Hidden
+{
+	visibility: collapse;
+}
+
+#HudSpecplayer__Stats
+{
+    width: HudSpecplayer_PanelWidth;
+    height: 0px;
+    horizontal-align: center;
+    background-color: gradient( linear, 50% 0%, 100% 0%, from( #000000EE ), to( #00000000 ) );
+                           
+}
+
+.HudSpecplayer__Stats_Header
+{
+    flow-children: right;
+    vertical-align: top;
+    width: 100%;
+    height: 10px;
+    margin-top: 1px;
+    margin-left: 8px;
+}
+
+.HudSpecplayer__Stats_Numbers
+{
+    flow-children: right;
+    vertical-align: bottom;
+    width: 100%;
+    height: 20px;
+    margin-left: 8px;
+}
+
+.HudSpecplayer__Stats_HeaderText
+{
+    width: 54px;
+    vertical-align: top;
+    font-size: 10px;
+    text-align: center;
+    font-family: Stratum2, 'Arial Unicode MS';
+    font-weight: medium;
+    text-shadow: 1px 1px 1px 2.0 black;
+    color: #888888FF;
+}
+
+.HudSpecplayer__Stats_NumberText
+{
+    width: 54px;
+    vertical-align: bottom;
+    font-size: 16px;
+    text-align: center;
+    font-family: Stratum2, 'Arial Unicode MS';
+                          
+    text-shadow: 1px 1px 1px 2.0 black;
+    color: #FFFFFFFF;
+}
+
+.HudSpecplayer__Stats-Text
+{
+    font-size: 16px;
+    font-family: Stratum2, 'Arial Unicode MS';
+    font-weight: medium;
+    margin-left: 6px;
+    text-shadow: 1px 1px 1px 2.0 black;
+    color: #AAAAAAFF;
+}
+
+   
+               
+                                                                              
+                                          
+   
+.HudSpecplayer__key-hints
+{	
+	horizontal-align: center;
+	flow-children: down;
+	
+    visibility: visible;
+	margin-top: 9px;
+}
+
+.key-hints-top-row
+{
+    height: fit-children;
+    horizontal-align: center;
+    overflow: noclip;
+    flow-children: right;
+}
+
+.key-hints-bottom-row
+{
+    height: fit-children;
+    horizontal-align: center;
+    overflow: noclip;
+    flow-children: right;
+	
+	margin-top: 1px;
+}
+
+.HudSpecplayer__key-hints-text
+{
+    width: fit-children;
+    font-family: Stratum2, 'Arial Unicode MS';
+	font-size: 17px;
+	font-weight: normal;
+	white-space: normal;
+	letter-spacing: 0px;
+	
+    text-shadow: 2px 2px 1px 2.0 #00000099;
+    color: #B6B6B6;
+    vertical-align: top;
+    padding-left: 3px;
+	                    
+	                       
+}
+
+.HudSpecplayer__key-hints-text--hidden
+{
+    visibility: collapse;
+}
+
+.HudSpecplayer__Item
+{
+
+}
+
+#ServerSponserLogosContainer
+{
+    width: HudSpecplayer_PanelWidth;
+    height: 90px;
+    horizontal-align: center;
+       
+                                                                
+                                                                       
+      
+    background-color: #00000000;
+}
+
+.HudSpecplayer__ReplayPlayerTag
+{
+    width: 512px;
+	height: 256px;
+	                                  
+	transform-origin: 50% 100%;
+	x: -256px;	                   
+	y: -256px; 	                
+
+                                  
+
+    visibility: visible;
+}
+
+.HudSpecplayer__ReplayPlayerArrow
+{
+    horizontal-align: center_nopixelsnap;
+	vertical-align: bottom;
+                                       
+    width: 42px;
+    height: 42px;
+
+    wash-color: #555555FF;
+}
+
+.HudSpecplayer__ReplayPlayerText
+{
+    height: 48px;
+
+    border: 2px solid #555555FF;
+
+    font-family: Stratum2, 'Arial Unicode MS';
+	font-size: 38px;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px 2.0 black;
+    text-align: center;
+    color: #FFFFFFFF;
+
+    horizontal-align: center;
+    vertical-align: bottom;
+    margin-bottom: 32px;
+    padding-left: 16px;
+    padding-right: 16px;
+
+    background-color: #222222FF;
+
+    visibility: visible;
+}
+
+.HudSpecplayer__SponserLogos
+{
+    height: 110px;
+    horizontal-align: center;
+    vertical-align: top;
+}
+
+.HudSpecplayer__player-name
+{
+    font-size: 26px;
+    font-family: Stratum2, 'Arial Unicode MS';
+    font-weight: bold;
+	letter-spacing: 0px;
+	text-overflow: clip;
+	
+	vertical-align: middle;
+	margin-left: 83px;
+    margin-bottom: 20px;
+	padding-right: 20px;
+    color: white;
+    white-space: nowrap;
+	
+	-s2-mix-blend-mode: SRGBadditive;
+	
+	opacity: 1;
+}
+
+.HudSpecplayerContainer
+{
+                       
+	height: 99px;
+	width: HudSpecplayer_PanelWidth;
+    horizontal-align: center;
+
+	opacity: 1.0;
+}
+
+.HudSpecplayerBG
+{
+	height: 100%;
+	width: HudSpecplayer_PanelWidth;
+    background-image: url( "file://{images}/hud/gotvCT.png" );
+	background-size: 100% 100%;
+	background-img-opacity: 0.6;
+    horizontal-align: center;
+    vertical-align: top;
+}
+
+.HudSpecplayerBG__Border
+{
+	width: 100%;
+	height: 100%;
+    opacity: 0.9;
+	               
+                          
+                                         
+                                      
+}
+
+.HudSpecplayerBG__MainBG
+{
+	width: 100%;
+	height: 100%;
+    opacity: 0;
+}
+
+.HudSpecplayerBG__TopStrip
+{
+    width: 100%;
+	height: 2px;
+    vertical-align: top;
+    background-color: gradient( linear, 50% 0%, 92% 0%, from( #080808FF ), to( #00000000 ) );
+}
+
+.HudSpecplayerBG__BottomStrip
+{
+    width: 100%;
+	height: 4px;
+    vertical-align: bottom;
+	background-color: gradient( linear, 0% 0%, 100% 0%, from( #bebebeFF ), color-stop( 0.5, #bebebeFF ), to( #11111100 ) );                              
+}
+
+.HudSpecplayerBG__DefaultLogo
+{
+	                             
+    pre-transform-rotate2d: -20deg;
+
+    width: 100%;
+	height: 100%;
+	horizontal-align: center;
+	vertical-align: center;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	opacity: 0.15;
+
+	background-repeat: no-repeat;
+	background-position: 20% 33%;
+	background-size: 64% 480%;
+
+	visibility: collapse;
+}
+
+.HudSpecplayerBG__TeamLogo
+{
+	                             
+    pre-transform-rotate2d: -20deg;
+
+    width: 100%;
+	height: 100%;
+	horizontal-align: center;
+	vertical-align: center;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	opacity: 0.15;
+
+	background-repeat: no-repeat;
+	background-position: 15% 41%;
+	background-size: 17% 215%;
+    background-image: url( "file://{images}/hud/winpanel/ct_patch.png" );
+
+	visibility: collapse;
+}
+
+.HudSpecplayerRoot--ShowTeamLogo .HudSpecplayerBG__DefaultLogo
+{
+	visibility: collapse;
+}
+
+.HudSpecplayerRoot--TeamCT .HudSpecplayerBG
+{
+	background-image: url( "file://{images}/hud/gotvCT.png" );
+}
+
+.HudSpecplayerRoot--TeamT .HudSpecplayerBG
+{
+	background-image: url( "file://{images}/hud/gotvT.png" );
+}
+
+.HudSpecplayerRoot--TeamCT .HudSpecplayer__player-name
+{
+	color: #88a4d1;
+}
+
+.HudSpecplayerRoot--TeamT .HudSpecplayer__player-name
+{
+	color: #d4c072;
+}
+
+/*
+.HudSpecplayerRoot--TeamCT .HudSpecplayerBG__Border
+{
+	background-color: gradient( linear, 0% 0%, 100% 0%, from( #00000000 ), to( #00000000 ) );
+}
+
+.HudSpecplayerRoot--TeamCT .HudSpecplayerBG__BottomStrip
+{
+	background-color: gradient( linear, 50% 0%, 100% 0%, from( #227fbaFF ), to( #227fba00 ) );
+}
+
+.HudSpecplayerRoot--TeamCT .HudSpecplayerBG__MainBG
+{
+	background-color: gradient( linear, 0% 0%, 90% 0%, from( #00000000 ), color-stop( 0.7, #00000000 ), to( #00000000 ) ); 
+}
+
+.HudSpecplayerRoot--TeamCT .HudSpecplayerBG__DefaultLogo
+{
+	background-image: url( "file://{images}/hud/winpanel/ct_patch.png" ); 
+}
+
+                       
+
+.HudSpecplayerRoot--TeamT .HudSpecplayerBG__Border
+{
+	background-color: gradient( linear, 0% 0%, 100% 0%, from( #00000000 ), to( #00000000 ) );
+}
+
+.HudSpecplayerRoot--TeamT .HudSpecplayerBG__BottomStrip
+{
+	background-color: gradient( linear, 50% 0%, 100% 0%, from( #ddb417FF ), to( #ddb41700 ) );
+}
+
+.HudSpecplayerRoot--TeamT .HudSpecplayerBG__MainBG
+{
+	background-color: gradient( linear, 0% 0%, 90% 0%, from( #00000000 ), color-stop( 0.7, #00000000 ), to( #00000000 ) ); 
+}
+
+.HudSpecplayerRoot--TeamT .HudSpecplayerBG__DefaultLogo
+{
+	background-image: url( "file://{images}/hud/winpanel/t_patch.png" );
+}
+
+                         
+
+.HudSpecplayerRoot--TeamNone .HudSpecplayerBG__Border
+{
+	background-color: gradient( linear, 0% 0%, 100% 0%, from( #00000000 ), to( #00000000 ) );                                       
+}
+
+.HudSpecplayerRoot--TeamNone .HudSpecplayerBG__BottomStrip
+{
+	background-color: gradient( linear, 0% 0%, 100% 0%, from( #bebebeFF ), color-stop( 0.5, #bebebeFF ), to( #11111100 ) );
+}
+
+.HudSpecplayerRoot--TeamNone .HudSpecplayerBG__MainBG
+{
+	background-color: gradient( linear, 0% 0%, 90% 0%, from( #00000000 ), color-stop( 0.7, #00000000 ), to( #00000000 ) );
+}
+
+
+*/
+
+.HudSpecplayer__ItemContainer
+{
+    flow-children: left;
+	/* width: 580px;
+	height: 96px; */
+    margin-bottom: 0px;
+	
+	horizontal-align: right;
+	vertical-align: bottom;
+}
+
+.HudSpecplayer__ItemContainerBG
+{
+	width: 0px;
+	height: 0px;
+}
+
+.HudSpecplayer__ItemContainer--Hidden
+{
+	visibility: collapse;
+}
+
+.HudSpecplayer__Item
+{
+	width: 0px;
+	height: 0px;
+}
+
+.WeaponNameBG
+{
+	height: 24px;
+	width: 522px;
+	
+	background-color: gradient( linear, 0% 0%, 100% 0%, from( #00000000 ), color-stop( 0.26, #00000000 ), color-stop( 0.45, #00000079 ), to( #00000079 ) );
+	
+	horizontal-align: right;
+	vertical-align: bottom;
+}
+
+.HudSpecplayer__ItemName
+{
+    font-size: 18px;
+    font-family: Stratum2, 'Arial Unicode MS';
+    font-weight: normal;
+	text-overflow: noclip;
+    white-space: nowrap;
+	text-align: right;
+	letter-spacing: 0px;
+	
+	horizontal-align: right;
+	vertical-align: middle;
+                                                                 
+	margin-bottom: 1px;
+	padding-right: 9px;
+
+	-s2-mix-blend-mode: normal;
+	opacity: 1;
+}

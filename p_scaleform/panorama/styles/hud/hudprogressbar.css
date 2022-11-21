@@ -1,0 +1,418 @@
+   
+	            
+	
+	                                                                                              
+	                                                                                       
+  
+
+.hud-progress-bar
+{
+	opacity: 0;
+	width: 475px;
+	
+	                     
+	horizontal-align: center;
+	vertical-align: middle;
+	background-color: gradient( linear, 0% 0%, 100% 0%, from( #000000BB ), color-stop( 0.7, #000000BB ), to( #00000000 ) );
+	flow-children: right;
+	margin-left: 130px;
+	margin-top: 32px;
+	margin-bottom: 1px;
+	overflow: noclip;
+}
+
+.icon
+{	
+	flow-children: right;
+	horizontal-align: left;
+	height: fit-children;
+	z-index: 1;
+}
+
+.defuse_icon
+{
+	width: 114px;
+	height: 114px;
+	margin-top: -1px;
+	margin-bottom: -1px;
+	margin-left: -56px;
+}
+
+.alert_icon
+{
+	width: 114px;
+	height: 114px;
+	margin-top: -1px;
+	margin-bottom: -1px;
+	margin-left: -56px;
+}
+
+.text_layout
+{
+	flow-children: right;
+	margin-left: 8px;
+	margin-bottom: -1px;
+	margin-top: 11px;
+}
+
+.defuse-label
+{
+	font-family: Stratum2, 'Arial Unicode MS' ;
+	font-weight: bold;
+	font-size: 24px;
+	letter-spacing: 0px;
+	
+	color: white;
+	opacity: 1;
+	text-align: left;
+	margin-right: 100px; 
+}
+
+.time-label
+{
+	font-family: Stratum2, 'Arial Unicode MS' ;
+	font-weight: bold;
+	font-size: 24px;
+	text-align: right;
+	-s2-mix-blend-mode: screen;
+	color: #ff6060;
+	opacity: 1;
+}
+
+.info-label
+{
+	font-family: Stratum2, 'Arial Unicode MS' ;
+	font-weight: medium;
+	font-size: 22px;
+	letter-spacing: 0px;
+	text-align: left;
+	line-height: 24px;
+	
+	color: #ffffff;
+	opacity: 0.9;
+	-s2-mix-blend-mode: screen;
+	margin-left: 8px;
+	margin-top: 3px;
+	overflow: noclip;
+}
+
+.hud-bar-bg
+{
+	width: 360px;
+	height: 13px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+    opacity: 1;
+	background-color: gradient( linear, 0% 0%, 100% 0%, from( #26262676 ), color-stop( 0.5, #26262676 ), to( #00000000 ) );
+	overflow: noclip;
+	margin-left: -5px;
+	horizontal-align: left;
+}
+
+.hud-bar
+{
+	width: 100%;
+	height: 9px;
+	background-color: #ff2222FF;
+	overflow: noclip;
+	horizontal-align: left;
+	vertical-align: center_nopixelsnap;
+	
+	animation-name: defuse-anim;
+}
+
+.hud-progress-bar-layout 
+{
+	flow-children: down;
+	horizontal-align: left;
+	width: 100%;
+}
+
+
+.hud-progress-bar.hud-progress-bar--visible
+{
+	animation-name: hud-progressbar-FadeIn;
+	animation-duration: AlertAnimationSpeed;
+	animation-timing-function: linear;
+	animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+@keyframes 'hud-progressbar-FadeIn' 
+{
+  0% {
+    opacity: 1.0;
+	background-color: gradient( linear, 0% 0%, 100% 0%, from( #00000000 ), color-stop( 0.2, #00000000 ), to( #00000000 ) );
+  }
+  20% {
+    opacity: 1.0;
+	background-color: gradient( linear, 0% 0%, 100% 0%, from( #000000BB ), color-stop( 0.2, #00000000 ), to( #00000000 ) );
+  }
+  100% {
+    opacity: 1.0;
+	background-color: gradient( linear, 0% 0%, 100% 0%, from( #000000BB ), color-stop( 0.5, #000000BB ), to( #00000000 ) );
+  }
+}
+/*
+.hud-progress-bar__defuse-nokit .hud-bar
+{
+    animation-name: defuse;
+    animation-timing-function: linear;
+    animation-duration: 10s;
+    animation-iteration-count: 1;
+	animation-fill-mode: both;
+}
+
+.hud-progress-bar__defuse .hud-bar
+{
+    animation-name: defuse;
+    animation-timing-function: linear;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+	animation-fill-mode: both;
+}
+*/
+
+@keyframes 'defuse-anim' 
+{
+    0% 
+	{
+        clip:rect(0px, 360px, 12px, 0px);
+    }
+	100% 
+	{
+        clip:rect(0px, 0px, 12px, 0px);
+    }
+}
+
+
+.hud-progress-bar__defuse .alert_icon
+{
+	visibility: collapse;
+}
+
+.hud-progress-bar__defuse-nokit .defuse_icon
+{
+	visibility: collapse;
+}
+
+.hud-progress-bar__defuse .defuse_icon
+{
+	visibility: visible;
+}
+
+.hud-progress-bar__defuse-nokit .alert_icon
+{
+	visibility: visible;
+}
+
+
+                                                                                     
+.hud-progress-bar.hud-progress-bar--switched
+{
+	
+}
+
+.hud-progress-bar.hud-progress-bar--canceled
+{
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+.hud-progress-bar.hud-progress-bar--finished
+{
+	animation-name: defuse-finish-gradient;
+	animation-duration: AlertAnimationSpeed;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+@keyframes 'defuse-finish-gradient' 
+{
+  0% {
+    opacity: 1.0;
+	background-color: gradient( linear, 0% 0%, 100% 0%, from( #000000BB ), color-stop( 0.5, #000000BB ), to( #00000000 ) );
+  }
+  90% {
+    opacity: 1.0;
+	background-color: gradient( linear, 0% 0%, 100% 0%, from( #000000BB ), color-stop( 0.1, #00000000 ), to( #00000000 ) );
+  }
+  100% {
+    opacity: 0.0;
+	background-color: gradient( linear, 0% 0%, 100% 0%, from( #00000000 ), color-stop( 0.1, #00000000 ), to( #00000000 ) );
+  }
+}
+
+.hud-progress-bar--finished .alert_icon
+{
+	animation-name: defuse-finish-logo;
+	animation-duration: AlertAnimationSpeed;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+@keyframes 'defuse-finish-logo' 
+{
+  0% {
+    opacity: 1.0;
+  }
+  99% {
+    opacity: 1.0;
+  }
+  100% {
+    opacity: 0.0;
+  }
+}
+*/
+.hud-progress-bar-circle-animator {
+    width: 99px;
+    height: 99px;  
+    horizontal-align:center;
+    vertical-align:middle;
+    border: 8px solid #ffffff;                                          
+    border-radius: 50%;
+	animation-name: circle-full-to-empty;
+	opacity: 0.7;
+}
+
+
+.hud-progress-bar-circle-border-outer {
+    width: 100%;
+    height: 100%;  
+    horizontal-align: center;
+    vertical-align: middle;
+    border: 2px solid #00000099;
+	border-radius: 50%;
+	z-index: 0;
+}
+
+.hud-progress-bar-circle-border-inner {
+    width: 82%;
+    height: 82%;  
+    horizontal-align: center;
+    vertical-align: middle;
+    border: 2px solid #00000049;
+    border-radius: 50%;
+}
+
+.hud-progress-bar-circle-icon {
+    vertical-align: middle; 
+    horizontal-align: center;
+    height: 60px;
+    width: 60px;
+	brightness: 2;
+	img-shadow: 1px 1px 2px #000000;
+}
+
+@keyframes hud-progress-bar-defuse-animate
+{
+    0% {
+        wash-color-fast: color-CT;
+        transform: scaleX(0.95) scaleY(0.95) translateX(2px) translateY(2px);
+    }
+    50% {
+        wash-color-fast: hsv-transform(color-CT, 0, 0, 1.5);
+    }
+    90% {
+        transform: scaleX(1.0) scaleY(1.0) translateX(2px) translateY(2px);
+    }
+    100% {
+        wash-color-fast: color-CT;
+        transform: scaleX(0.95) scaleY(0.95) translateX(2px) translateY(2px);
+    }
+}
+
+.hud-progress-bar__defuse .hud-progress-bar-circle-icon
+{
+    wash-color-fast: color-CT;
+
+    animation-name: hud-progress-bar-defuse-animate;
+    animation-timing-function: ease-in-out;
+    animation-duration:0.8s;
+    animation-iteration-count:infinite;
+}
+
+@keyframes hud-progress-bar-bomb-animate
+{
+    0% {
+        wash-color-fast: color-icon-bomb;
+        transform: scaleX(1.0) scaleY(1.0);
+    }
+    50% {
+        wash-color-fast: hsv-transform(color-icon-bomb, 0, 0, 1.5);
+    }
+    90% {
+        transform: scaleX(1.05) scaleY(1.05);
+    }
+    100% {
+        wash-color-fast: color-icon-bomb;
+        transform: scaleX(1.0) scaleY(1.0);
+    }
+}
+.hud-progress-bar__defuse-nokit .hud-progress-bar-circle-icon,
+.hud-progress-bar__open-survival-safe .hud-progress-bar-circle-icon
+{
+    wash-color-fast: color-icon-bomb;
+
+    animation-name: hud-progress-bar-bomb-animate;
+    animation-timing-function: ease-in-out;
+    animation-duration:0.8s;
+    animation-iteration-count:infinite;
+}
+
+@keyframes hud-progress-bar-hostage-animate
+{
+    0% {
+        wash-color-fast: color-icon-hostage-transit;
+        transform: scaleX(1.0) scaleY(1.0) translateY(-3px);
+    }
+    50% {
+        wash-color-fast: hsv-transform(color-icon-hostage-transit, 0, 0, 1.5);
+    }
+    90% {
+        transform: scaleX(1.05) scaleY(1.05) translateY(-3px);
+    }
+    100% {
+        wash-color-fast: color-icon-hostage-transit;
+        transform: scaleX(1.0) scaleY(1.0) translateY(-3px);
+    }
+}
+.hud-progress-bar__pickup-hostage .hud-progress-bar-circle-icon,
+.hud-progress-bar__drop-hostage .hud-progress-bar-circle-icon,
+.hud-progress-bar__drop-heavyarmor .hud-progress-bar-circle-icon,
+{
+    wash-color-fast: color-icon-hostage-transit;
+
+    animation-name: hud-progress-bar-hostage-animate;
+    animation-timing-function: ease-in-out;
+    animation-duration:0.8s;
+    animation-iteration-count:infinite;
+}
+
+.hud-progress-bar-info
+{
+	flow-children: down;
+	vertical-align: middle;
+}
+
+
+.afxhidden 
+{
+	opacity: 0;
+	visibility: collapse;
+}
