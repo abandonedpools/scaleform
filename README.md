@@ -12,8 +12,7 @@ To use this you will need to install [HLAE](https://www.advancedfx.org/) and [MI
 2. Place the **p_scaleform** folder in your MIGI addons folder and click the "UPDATE BUILD" button in MIGI.
 
 3. Open the HLAE Custom Loader and launch CSGO with the commands `-game migi/csgo -afxdetourpanorama`, like this:
-
-![custom launcher](https://media.discordapp.net/attachments/893330030770405437/1044381127583998022/download_1.png?width=504&height=675 "custom launcher settings")
+![custom launcher](https://media.discordapp.net/attachments/893330030770405437/1044823556221050921/hlaelaucnh.png "custom launcher settings")
 
 If you get an error when launching, make sure MIGI and HLAE are updated to the latest version.
 
