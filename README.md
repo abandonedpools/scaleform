@@ -33,3 +33,9 @@ If you get an error when launching, make sure MIGI and HLAE are updated to the l
 ![Defuse Panel](https://media.discordapp.net/attachments/974395055064379402/1044809047376920607/video.00_00_00_28.Still003.png?width=1201&height=676 "Defuse Panel")
 
 ![2013 MVP Panel](https://media.discordapp.net/attachments/974395055064379402/1044809046995251230/video.00_00_02_04.Still004.png?width=1201&height=676 "2013 MVP Panel")
+
+## Credits
+
+- [offline](https://www.youtube.com/offlined)
+- [skam](https://www.youtube.com/@skam)
+- [jo (me)](https://www.youtube.com/shittyboyz)
