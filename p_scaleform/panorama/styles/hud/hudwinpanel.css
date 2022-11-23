@@ -668,11 +668,6 @@ CSGOHudWinPanel Label
 	width: fit-children;
 }
 
-.AvatarStar
-{
-
-}
-
 .MVP__Winner
 {
 	width: fit-children;
@@ -742,6 +737,11 @@ CSGOHudWinPanel Label
 	box-shadow: #000000A5 0px 0px 3px 2px;
 }
 
+.AvatarStar
+{
+	
+}
+
 .MVP__Avatar .AvatarImage
 {
 	padding: 2px;
@@ -775,7 +775,7 @@ CSGOHudWinPanel Label
 	                                  
 	vertical-align: bottom;
 	margin-left: -1px;
-	padding-top: 6px;
+	padding-top: 4px;
 }
 
 .WinPanelRoot--SurvivalVictory .MVP__MusicKit,
@@ -838,7 +838,7 @@ CSGOHudWinPanel Label
 	height: 34px;
 	vertical-align: bottom;
 	margin-bottom: 0px;
-	margin-top: 3px;
+	margin-top: 1px;
 }
 
 .MVP__MusicKitText

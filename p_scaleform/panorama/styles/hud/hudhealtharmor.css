@@ -91,7 +91,7 @@ CSGOHudHealthArmor Label
     opacity: 1.0;
 }
 
-.hud-HA-bg
+.hud-HA-bg1
 {
     flow-children:right;
                                                                                                                              
@@ -102,11 +102,10 @@ CSGOHudHealthArmor Label
                               
     width: 100%;
     height: 100%;
-    opacity: 1.0;
-                           
+    opacity: BackgroundOpacity;                      
 }
 
-.hud-HA-bg-h
+.hud-HA-bg-health
 {
                                                                                                                              
     background-image: url( "file://{images}/hud/hp.png" );
@@ -119,7 +118,7 @@ CSGOHudHealthArmor Label
 }
 
 
-.hud-HA-bg-a
+.hud-HA-bg-armor
 {
      background-image: url( "file://{images}/hud/armor.png" );
     background-size: 100% 100%;
@@ -156,7 +155,7 @@ CSGOHudHealthArmor Label
     height: 20px;
 }
                                             
-.hud-HA--critical  .hud-HA-bg-h
+.hud-HA--critical  .hud-HA-bg-health
 {
     background-image: url( "file://{images}/hud/hpred.png" );
     background-img-opacity: 0.92; 
@@ -328,13 +327,13 @@ ProgressBar
     visibility: collapse;
 }
 
-.hud-HA--small .hud-HA-bg-h
+.hud-HA--small .hud-HA-bg-health
 {
 	background-size: 171% 100%;
     width: 124px;
 }
 
-.hud-HA--small .hud-HA-bg-a
+.hud-HA--small .hud-HA-bg-armor
 {
     width: 225px;
 }

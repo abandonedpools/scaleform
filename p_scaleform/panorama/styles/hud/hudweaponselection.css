@@ -348,45 +348,6 @@ CSGOWeaponSelectionView Label
     -s2-mix-blend-mode: normal;
 }
 
-/* ↓↓↓↓ COMMENT THIS OUT TO REMOVE COLORED NAMES ↓↓↓↓ */
-
-
-.weapon-selection-item--selected.weapon-selection-item--rarity-1 .weapon-selection-item-name-text
-{
-    color: color-rarity-1;
-}
-.weapon-selection-item--selected.weapon-selection-item--rarity-2 .weapon-selection-item-name-text
-{
-    color: color-rarity-2;
-}
-.weapon-selection-item--selected.weapon-selection-item--rarity-3 .weapon-selection-item-name-text
-{
-    color:color-rarity-3;
-}
-.weapon-selection-item--selected.weapon-selection-item--rarity-4 .weapon-selection-item-name-text
-{
-    color: color-rarity-4;
-}
-.weapon-selection-item--selected.weapon-selection-item--rarity-5 .weapon-selection-item-name-text
-{
-    color: color-rarity-5;
-}
-.weapon-selection-item--selected.weapon-selection-item--rarity-6 .weapon-selection-item-name-text
-{
-    color: color-rarity-6;
-}
-.weapon-selection-item--selected.weapon-selection-item--rarity-7 .weapon-selection-item-name-text
-{
-    color: color-rarity-7;
-}
-.weapon-selection-item--selected.weapon-selection-item--rarity-99 .weapon-selection-item-name-text
-{
-    color: color-rarity-99;
-}
-
-
-/* ↑↑↑↑ ---------------------------------------- ↑↑↑↑ */
-
 .weapon-selection-item--selected.weapon-selection-item--rarity-0 .weapon-selection-item-icon-main
 {
     img-shadow:  0px 0px 0px 3.0 color-rarity-0;
@@ -879,3 +840,41 @@ CSGOWeaponSelectionView Label
     animation-timing-function: ease-in-out;
     animation-iteration-count: 1;
 }
+
+
+/* ↓↓↓↓ COMMENT THIS OUT TO REMOVE COLORED NAMES ↓↓↓↓ */
+
+.weapon-selection-item--selected.weapon-selection-item--rarity-1 .weapon-selection-item-name-text
+{
+    color: color-rarity-1;
+}
+.weapon-selection-item--selected.weapon-selection-item--rarity-2 .weapon-selection-item-name-text
+{
+    color: color-rarity-2;
+}
+.weapon-selection-item--selected.weapon-selection-item--rarity-3 .weapon-selection-item-name-text
+{
+    color:color-rarity-3;
+}
+.weapon-selection-item--selected.weapon-selection-item--rarity-4 .weapon-selection-item-name-text
+{
+    color: color-rarity-4;
+}
+.weapon-selection-item--selected.weapon-selection-item--rarity-5 .weapon-selection-item-name-text
+{
+    color: color-rarity-5;
+}
+.weapon-selection-item--selected.weapon-selection-item--rarity-6 .weapon-selection-item-name-text
+{
+    color: color-rarity-6;
+}
+.weapon-selection-item--selected.weapon-selection-item--rarity-7 .weapon-selection-item-name-text
+{
+    color: color-rarity-7;
+}
+.weapon-selection-item--selected.weapon-selection-item--rarity-99 .weapon-selection-item-name-text
+{
+    color: color-rarity-99;
+}
+
+/* ↑↑↑↑ ---------------------------------------- ↑↑↑↑ */

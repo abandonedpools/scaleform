@@ -6,7 +6,8 @@
 	</styles>
 
 	<CSGOMoneyPanel class="money" hittest="false" force-no-composition-layer="true">
-	    <Panel id="MoneyBG" class="money-text-bg"/>
+	    <Panel class="money-text-bg"/>
+		<Panel id="MoneyBG" class="afxhidden"/>
 	    <Panel class="money-text">
 		
 			<Image class="money-text-buy-icon" src="file://{images}/icons/ui/buyzone.png"/>

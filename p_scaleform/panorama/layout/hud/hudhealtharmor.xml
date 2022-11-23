@@ -15,10 +15,12 @@
 	<CSGOHudHealthArmor class="hud-HA" hittest="false">
 
 		                         
-	<Panel id="HudHealthArmorBG" class="hud-HA-bg">
-      <Panel id="HudHealthBG" class="hud-HA-bg-h"  />
-      <Panel id="HudArmorBG" class="hud-HA-bg-a"  />
+	<Panel class="hud-HA-bg1">
+      <Panel id="HudHealthBG" class="hud-HA-bg-health"  />
+      <Panel id="HudArmorBG" class="hud-HA-bg-armor"  />
     </Panel>
+	
+	<Panel id="HudHealthArmorBG" class="afxhidden" />
 
                                             
 		<Panel class="hud-HA-main left-right-flow">

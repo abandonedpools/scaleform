@@ -130,6 +130,8 @@
     vertical-align: middle;
     margin-left: 0px;
     background-color: gradient( linear, 100% 0%, 0% 0%, from( #00000000 ), color-stop( 0.25, #000000F3 ), to( #000000F3 ) );
+	
+	opacity: BackgroundOpacity;
 }
 
 .survival .money-text-bg

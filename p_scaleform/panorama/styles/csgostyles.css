@@ -1,5 +1,5 @@
 
-@define BackgroundOpacity: 0.95; /* opacity of the ammo and radar location backgrounds since they dont change based on in-game setting. Change this to the HUD alpha value you use. (cl_hud_background_alpha) */
+@define BackgroundOpacity: 0.95; /* opacity of the health, armor and location backgrounds since they dont change based on in-game setting. Change this to the HUD alpha value you want. (cl_hud_background_alpha) */
 
 @define PixelGap: 1px; /* set to 0px to remove the small gap under ammo and around top left corner if you want a cleaner look /// and also top of the gotv scoreboard */
 
@@ -10,6 +10,7 @@
 @define AlertAnimationSpeed: 0.2s; /* default 0.2 */
 
 @define PermenentTeamPopup: 0; /* change to 1 if you want the "playing on x team" popup to be visible for the whole round (https://prnt.sc/Ndj0DJjSAhfl) / its normally a demo bug (i believe) so it can happen even with this set to 0, but 1 forces it */ 
+
 
 /* show/hide panels (visible/collapse) */
 
