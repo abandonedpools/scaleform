@@ -1,7 +1,7 @@
 
 # Scaleform HUD for CS:GO demos
 
-This is an addon that replicates CS:GO's old Scaleform HUD. **It only works for watching/recording demos or offline play with -insecure.**
+This is an addon that replicates CS:GO's old Scaleform HUD. **It only works for watching/recording demos or playing offline with -insecure.**
 
 To use this you will need to install [HLAE](https://www.advancedfx.org/) and [MIGI](https://zoolsmith.github.io/MIGI3/). If you are not familiar with these programs, they have guides available on their website.
 
