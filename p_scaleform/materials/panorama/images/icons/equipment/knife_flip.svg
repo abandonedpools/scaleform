@@ -6,8 +6,8 @@
    x="0px"
    y="0px"
    width="79.167"
-   height="21"
-   viewBox="0 0 79.167 21"
+   height="21.299999"
+   viewBox="0 0 79.167 21.299999"
    enable-background="new 0 0 79.167 32"
    xml:space="preserve"
    id="svg9"
@@ -34,12 +34,14 @@
    inkscape:window-x="-8"
    inkscape:window-y="-8"
    inkscape:window-maximized="1"
-   inkscape:current-layer="svg9" />
+   inkscape:current-layer="Selected_Items"
+   height="21.6px" />
 <g
    id="Selected_Items"
    transform="translate(0,-7.5575303)">
 	<g
-   id="g5">
+   id="g5"
+   transform="translate(0.07482703,-0.07482703)">
 		<g
    id="Selected_Items_22_">
 			<path
