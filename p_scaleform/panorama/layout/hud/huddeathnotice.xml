@@ -28,17 +28,17 @@
 						<Label id="Assister" text="{s:name}" />
 					</Panel>
 					                                                                                                  
-					<Image id="Weapon" class="DeathNoticeIcon WeaponIcon" textureheight="20" scaling="stretch-to-fit-preserve-aspect" />
+					<Image id="Weapon" class="DeathNoticeIcon Weapon" textureheight="19" scaling="stretch-to-fit-preserve-aspect" />
 					
 					<Image id="NoScopeIcon" class="DeathNoticeIcon" src="file://{images}/hud/deathnotice/noscope.svg" textureheight="18" scaling="stretch-to-fit-preserve-aspect" />
 					                           
 					<Image id="ThroughSmokeIcon" class="DeathNoticeIcon" src="file://{images}/hud/deathnotice/smoke_kill.svg" textureheight="18" scaling="stretch-to-fit-preserve-aspect" />
 					                       
-					<Image id="Penetrate" class="DeathNoticeIcon" src="file://{images}/hud/deathnotice/penetrate.svg" textureheight="21" scaling="stretch-to-fit-preserve-aspect" />
+					<Image id="Penetrate" class="DeathNoticeIcon Penetrate" src="file://{images}/hud/deathnotice/penetrate.svg" textureheight="20" scaling="stretch-to-fit-preserve-aspect" />
 					                      
-					<Image id="HeadShot" class="DeathNoticeIcon" src="file://{images}/hud/deathnotice/icon_headshot.svg" textureheight="19" scaling="stretch-to-fit-preserve-aspect" />
+					<Image id="HeadShot" class="DeathNoticeIcon HeadShot" src="file://{images}/hud/deathnotice/icon_headshot.svg" textureheight="18" scaling="stretch-to-fit-preserve-aspect" />
 					                     
-					<Image id="Suicide" class="DeathNoticeIcon" src="file://{images}/hud/deathnotice/icon_suicide.svg" scaling="stretch-to-fit-preserve-aspect" />
+					<Image id="Suicide" class="DeathNoticeIcon2" src="file://{images}/hud/deathnotice/icon_suicide.svg" scaling="stretch-to-fit-preserve-aspect" />
 					                                       
 					<Label id="Victim" text="{s:name}" />
 				</Panel>
