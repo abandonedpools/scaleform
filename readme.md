@@ -26,16 +26,18 @@ If you get an error when launching, make sure MIGI and HLAE are updated to the l
 
 ## Screenshots
 
-![Default Settings POV Demo](https://media.discordapp.net/attachments/974395055064379402/1044818925571022848/video.00_00_02_01.Still003.png?width=1201&height=676 "POV Demo, Default Settings")
+![POV demo, default settings](https://media.discordapp.net/attachments/974395055064379402/1044818925571022848/video.00_00_02_01.Still003.png?width=1201&height=676 "POV demo, default settings")
 
-![Default Settings GOTV Demo]( https://media.discordapp.net/attachments/974395055064379402/1044812324755746916/video.00_00_01_06.Still002.png?width=1201&height=676  "GOTV Demo, Default Settings")
+![GOTV demo, default settings]( https://media.discordapp.net/attachments/974395055064379402/1044812324755746916/video.00_00_01_06.Still002.png?width=1201&height=676  "GOTV demo, default settings")
 
-![Defuse Panel](https://media.discordapp.net/attachments/974395055064379402/1044809047376920607/video.00_00_00_28.Still003.png?width=1201&height=676 "Defuse Panel")
+![defuse panel](https://media.discordapp.net/attachments/974395055064379402/1044809047376920607/video.00_00_00_28.Still003.png?width=1201&height=676 "defuse panel")
 
-![2013 MVP Panel](https://media.discordapp.net/attachments/974395055064379402/1044809046995251230/video.00_00_02_04.Still004.png?width=1201&height=676 "2013 MVP Panel")
+![2013 MVP panel](https://media.discordapp.net/attachments/974395055064379402/1044809046995251230/video.00_00_02_04.Still004.png?width=1201&height=676 "2013 MVP panel")
 
 ## Credits
 
 - [offline](https://www.youtube.com/offlined)
 - [skam](https://www.youtube.com/@skam)
 - [jo (me)](https://www.youtube.com/shittyboyz)
+
+#### Make sure to join the [sandler city discord server](https://discord.gg/ATHaaNuxwU) if you have any questions or want to be notified for big updates/fixes.
