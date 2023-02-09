@@ -24,7 +24,7 @@
           <CCSGOSteamInputAction actionset="GameControls" separatortext="/" controllernumber = "1" id="action-binding-glyph-slots"/> 
           <CCSGOSteamInputAction actionset="GameControls" separatortext="/" controllernumber = "1" id="action-binding-glyph"/> 
                             
-          <Label class="weapon-selection-item-count" text="#Panorama_WeaponSelection_ItemCount" />
+          <Label class="weapon-selection-item-count" text="({d:r:WeaponIcon--itemcount})" />
         </Panel>
         <Panel class="weapon-selection-item-name">
 		  <Label class="weapon-selection-item-name-text" text="{s:WeaponIcon--name}" />
@@ -42,7 +42,7 @@
           <CCSGOSteamInputAction actionset="GameControls" separatortext="/" controllernumber = "1" id="action-binding-glyph-slots"/> 
           <CCSGOSteamInputAction actionset="GameControls" separatortext="/" controllernumber = "1" id="action-binding-glyph"/> 
                             
-          <Label class="weapon-selection-item-count" text="(2)" />
+          <Label class="weapon-selection-item-count" text="({d:r:WeaponIcon--itemcount})" />
         </Panel>
         <Panel class="weapon-selection-item-name">
 		  <Label class="weapon-selection-item-name-text" text="{s:WeaponIcon--name}" />
