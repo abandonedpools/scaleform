@@ -40,4 +40,4 @@ If you get an error when launching, make sure MIGI and HLAE are updated to the l
 - [skam](https://www.youtube.com/@skam)
 - [jo (me)](https://www.youtube.com/shittyboyz)
 
-#### Make sure to join the [sandler city discord server](https://discord.gg/ATHaaNuxwU) if you have any questions or want to be notified for big updates/fixes.
+And thanks to ccqts and sloxy for also helping me with CSS/XML when I first started working on this project.
